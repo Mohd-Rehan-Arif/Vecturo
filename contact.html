@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Free Audit — Vecturo | Accelerating Local Growth</title>
+  <meta name="description" content="Claim your free 8-page digital footprint audit or schedule a 20-minute calendar strategy session with a Vecturo engineer.">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: {
+              950: '#061325',
+              900: '#0A2540',
+              800: '#0F355C',
+              700: '#174E82',
+            },
+            teal: {
+              400: '#26E0C2',
+              500: '#00D4B2',
+              600: '#00B89A',
+              700: '#0D9488',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-[#FAFAFC] text-slate-800 antialiased flex flex-col min-h-screen">
+
+  <!-- TOP BANNER -->
+  <div class="bg-gradient-to-r from-navy-950 via-navy-900 to-navy-950 text-white text-xs py-2 px-4 border-b border-navy-800">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-teal-500 text-navy-900">LIMITED SLOTS</span>
+        <span class="text-slate-200">5 Discovery Consultations Reserved for Qualified Storefronts This Week.</span>
+      </div>
+      <a href="tel:+919891875136" class="font-semibold text-teal-400 hover:text-teal-300 font-mono">
+        Call +91 98918 75136 &rarr;
+      </a>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header id="site-header" class="sticky top-0 z-40 transition-all duration-300 bg-white/95 backdrop-blur-md border-b border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center gap-3 group">
+          <img src="assets/logo.png" alt="Vecturo Logo" class="h-12 md:h-[48px] w-auto object-contain transition-transform group-hover:scale-105">
+        </a>
+        <nav class="hidden md:flex items-center space-x-8">
+          <a href="index.html" class="nav-link text-sm font-medium text-slate-600 hover:text-teal-600">Home</a>
+          <a href="services.html" class="nav-link text-sm font-medium text-slate-600 hover:text-teal-600">Services</a>
+          <a href="index.html#calculator-section" class="text-sm font-medium text-slate-600 hover:text-teal-600">ROI Calculator</a>
+          <a href="about.html" class="nav-link text-sm font-medium text-slate-600 hover:text-teal-600">About Us</a>
+          <a href="contact.html" class="nav-link text-sm font-semibold text-teal-600">Contact</a>
+        </nav>
+        <div class="hidden md:flex items-center gap-4">
+          <a href="tel:+919891875136" class="text-xs font-semibold text-slate-500 hover:text-navy-900 flex items-center gap-1 font-mono">
+            <i data-lucide="phone" class="w-3.5 h-3.5 text-teal-600"></i> +91 98918 75136
+          </a>
+        </div>
+        <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-600 hover:text-navy-900">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="fixed inset-0 z-50 bg-navy-950/80 backdrop-blur-sm hidden">
+    <div class="fixed top-0 right-0 w-full max-w-sm h-full bg-white shadow-2xl p-6 flex flex-col justify-between">
+      <div>
+        <div class="flex items-center justify-between pb-6 border-b border-slate-100">
+          <img src="assets/logo.png" alt="Vecturo" class="h-12 w-auto">
+          <button id="close-mobile-menu" class="p-2 text-slate-400 hover:text-slate-700">
+            <i data-lucide="x" class="w-6 h-6"></i>
+          </button>
+        </div>
+        <nav class="mt-6 flex flex-col space-y-4">
+          <a href="index.html" class="mobile-nav-link text-lg font-medium text-slate-600">Home</a>
+          <a href="services.html" class="mobile-nav-link text-lg font-medium text-slate-600">Services</a>
+          <a href="about.html" class="mobile-nav-link text-lg font-medium text-slate-600">About Us</a>
+          <a href="contact.html" class="mobile-nav-link text-lg font-semibold text-teal-600">Contact & Audit</a>
+        </nav>
+      </div>
+      <div class="pt-6 border-t border-slate-100">
+        <a href="tel:+919891875136" class="w-full inline-flex items-center justify-center gap-2 py-3 rounded-lg font-bold text-navy-950 bg-teal-500 hover:bg-teal-400">
+          <i data-lucide="phone" class="w-4 h-4"></i> Call +91 98918 75136
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main class="flex-grow">
+    
+    <!-- HERO SECTION -->
+    <section class="py-16 md:py-20 bg-white border-b border-slate-200/80 bg-grid-pattern">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-navy-900 text-teal-400 text-xs font-bold uppercase tracking-wider">
+            Direct Growth Channels
+          </div>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-navy-950 tracking-tight">
+            Stop Your Revenue Leak. <br>
+            <span class="text-gradient">Claim Your Local Footprint.</span>
+          </h1>
+          <p class="text-lg text-slate-600 leading-relaxed">
+            Choose your preferred path below: submit your business details for an instant 8-page diagnostic audit, or book a 20-minute live screen-share strategy call with our engineering team.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN INTERACTIVE SECTION -->
+    <section class="py-16 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          
+          <!-- LEFT COLUMN: INTERACTIVE FORM & SCHEDULER (8 COLS) -->
+          <div class="lg:col-span-7 space-y-12">
+            
+            <!-- OPTION 1: INSTANT AUDIT WIZARD -->
+            <div class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-md">
+              <div class="flex items-center gap-3 pb-6 border-b border-slate-100 mb-6">
+                <div class="w-10 h-10 rounded-xl bg-teal-500/20 text-teal-700 flex items-center justify-center">
+                  <i data-lucide="file-search" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-navy-950">Option 1: Free 8-Page Footprint Audit</h3>
+                  <p class="text-xs text-slate-500">Delivered directly to your inbox within minutes</p>
+                </div>
+              </div>
+
+              <form id="vecturo-audit-form" class="space-y-6">
+                <!-- STEP 1 -->
+                <div id="step-1" class="space-y-4">
+                  <div class="text-xs font-bold text-teal-600 uppercase tracking-wider">Step 1: Your Storefront Profile</div>
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Business Name *</label>
+                      <input type="text" id="audit-biz-name" required placeholder="e.g. Bluebonnet Pharmacy" class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm">
+                    </div>
+                    <div>
+                      <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">City / Metro *</label>
+                      <input type="text" id="audit-city" required placeholder="e.g. New Delhi, India" class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm">
+                    </div>
+                  </div>
+                  <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Primary Category</label>
+                    <input type="text" id="audit-category" placeholder="e.g. Independent Pharmacy, Bakery, Dental" class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm">
+                  </div>
+                  <div class="pt-2 flex justify-end">
+                    <button type="button" id="to-step-2-btn" class="px-6 py-2.5 rounded-xl text-xs font-bold bg-navy-900 text-teal-400 hover:bg-navy-950 flex items-center gap-2">
+                      <span>Next: Web Presence</span>
+                      <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- STEP 2 -->
+                <div id="step-2" class="space-y-4 hidden">
+                  <div class="text-xs font-bold text-teal-600 uppercase tracking-wider">Step 2: Digital Baseline</div>
+                  <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Current Website URL</label>
+                    <input type="text" id="audit-current-url" placeholder="https://yourstore.com (or leave empty)" class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm">
+                  </div>
+                  <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Google Maps Profile Status</label>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                      <label class="flex items-center gap-2 p-2.5 rounded-xl border border-slate-200 cursor-pointer text-xs font-medium">
+                        <input type="radio" name="gbp_status" value="verified" checked>
+                        <span>Claimed & active</span>
+                      </label>
+                      <label class="flex items-center gap-2 p-2.5 rounded-xl border border-slate-200 cursor-pointer text-xs font-medium">
+                        <input type="radio" name="gbp_status" value="unclaimed">
+                        <span>Unclaimed / Old</span>
+                      </label>
+                      <label class="flex items-center gap-2 p-2.5 rounded-xl border border-slate-200 cursor-pointer text-xs font-medium">
+                        <input type="radio" name="gbp_status" value="none">
+                        <span>Not sure</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="pt-2 flex justify-between">
+                    <button type="button" id="back-to-step-1-btn" class="px-4 py-2 text-xs font-semibold text-slate-500">Back</button>
+                    <button type="button" id="to-step-3-btn" class="px-6 py-2.5 rounded-xl text-xs font-bold bg-navy-900 text-teal-400 hover:bg-navy-950 flex items-center gap-2">
+                      <span>Next: Contact Details</span>
+                      <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- STEP 3 -->
+                <div id="step-3" class="space-y-4 hidden">
+                  <div class="text-xs font-bold text-teal-600 uppercase tracking-wider">Step 3: Delivery Address</div>
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Your Name *</label>
+                      <input type="text" id="audit-contact-name" required placeholder="Jane Doe" class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm">
+                    </div>
+                    <div>
+                      <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Phone Number *</label>
+                      <input type="tel" id="audit-phone" required placeholder="(555) 000-0000" class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm">
+                    </div>
+                  </div>
+                  <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Business Email (Report Delivery) *</label>
+                    <input type="email" id="audit-email" required placeholder="jane@store.com" class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm">
+                  </div>
+                  <div class="pt-2 flex justify-between">
+                    <button type="button" id="back-to-step-2-btn" class="px-4 py-2 text-xs font-semibold text-slate-500">Back</button>
+                    <button type="submit" id="submit-audit-btn" class="px-8 py-3 rounded-xl text-xs font-bold bg-teal-500 text-navy-950 hover:bg-teal-400 glow-teal flex items-center gap-2">
+                      <span>Run Diagnostic & Send Audit</span>
+                      <i data-lucide="sparkles" class="w-4 h-4"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- SCAN ANIMATION -->
+                <div id="step-scan" class="py-8 text-center space-y-4 hidden">
+                  <div class="w-12 h-12 rounded-xl bg-navy-900 text-teal-400 flex items-center justify-center mx-auto animate-bounce">
+                    <i data-lucide="scan" class="w-6 h-6"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-base font-bold text-navy-950">Generating Footprint Diagnostic...</h4>
+                    <p id="scan-status-text" class="text-xs text-slate-500 font-mono mt-1">Connecting to Google Local API...</p>
+                  </div>
+                  <div class="w-full max-w-sm mx-auto bg-slate-200 h-2 rounded-full overflow-hidden">
+                    <div id="scan-progress-bar" class="bg-teal-500 h-full w-1/4 transition-all duration-500"></div>
+                  </div>
+                </div>
+
+                <!-- SUCCESS STATE -->
+                <div id="step-success" class="py-8 text-center space-y-4 hidden">
+                  <div class="w-12 h-12 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
+                    <i data-lucide="check" class="w-6 h-6"></i>
+                  </div>
+                  <h4 class="text-xl font-bold text-navy-950">Diagnostic Sent!</h4>
+                  <p class="text-xs text-slate-600 max-w-sm mx-auto">
+                    Your 8-page audit for <span id="success-biz-name" class="font-bold text-navy-900">Your Store</span> has been compiled and emailed to you.
+                  </p>
+                </div>
+              </form>
+            </div>
+
+            <!-- OPTION 2: CALENDAR DISCOVERY CALL SCHEDULER -->
+            <div id="calendar-scheduler" class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-md">
+              <div class="flex items-center gap-3 pb-6 border-b border-slate-100 mb-6">
+                <div class="w-10 h-10 rounded-xl bg-navy-900 text-teal-400 flex items-center justify-center">
+                  <i data-lucide="calendar" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-navy-950">Option 2: Book 20-Min Live Discovery Session</h3>
+                  <p class="text-xs text-slate-500">Direct 1-on-1 strategy call with our Senior Local Growth Engineer</p>
+                </div>
+              </div>
+
+              <!-- Scheduler Picker -->
+              <div id="calendar-picker">
+                <form id="calendar-booking-form" class="space-y-6">
+                  
+                  <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">1. Select Target Date</label>
+                    <div class="grid grid-cols-3 gap-3">
+                      <label class="p-3 rounded-xl border border-slate-200 text-center cursor-pointer hover:border-teal-500 block has-[:checked]:border-teal-500 has-[:checked]:bg-teal-50/50">
+                        <input type="radio" name="call_date" value="Tomorrow" checked class="sr-only">
+                        <div class="text-[10px] text-slate-500 uppercase font-semibold">Tomorrow</div>
+                        <div class="text-sm font-bold text-navy-950">Wed, Oct 14</div>
+                      </label>
+                      <label class="p-3 rounded-xl border border-slate-200 text-center cursor-pointer hover:border-teal-500 block has-[:checked]:border-teal-500 has-[:checked]:bg-teal-50/50">
+                        <input type="radio" name="call_date" value="Thursday" class="sr-only">
+                        <div class="text-[10px] text-slate-500 uppercase font-semibold">Day 2</div>
+                        <div class="text-sm font-bold text-navy-950">Thu, Oct 15</div>
+                      </label>
+                      <label class="p-3 rounded-xl border border-slate-200 text-center cursor-pointer hover:border-teal-500 block has-[:checked]:border-teal-500 has-[:checked]:bg-teal-50/50">
+                        <input type="radio" name="call_date" value="Friday" class="sr-only">
+                        <div class="text-[10px] text-slate-500 uppercase font-semibold">Day 3</div>
+                        <div class="text-sm font-bold text-navy-950">Fri, Oct 16</div>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">2. Select Time Window (CST)</label>
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+                      <button type="button" data-time="10:00 AM CST" class="calendar-slot py-2.5 px-3 rounded-xl border border-slate-200 text-xs font-medium hover:border-teal-500 transition-colors bg-white">10:00 AM</button>
+                      <button type="button" data-time="11:30 AM CST" class="calendar-slot py-2.5 px-3 rounded-xl border border-slate-200 text-xs font-medium hover:border-teal-500 transition-colors bg-white">11:30 AM</button>
+                      <button type="button" data-time="2:00 PM CST" class="calendar-slot py-2.5 px-3 rounded-xl border border-slate-200 text-xs font-medium hover:border-teal-500 transition-colors bg-white">2:00 PM</button>
+                      <button type="button" data-time="3:45 PM CST" class="calendar-slot py-2.5 px-3 rounded-xl border border-slate-200 text-xs font-medium hover:border-teal-500 transition-colors bg-white">3:45 PM</button>
+                    </div>
+                  </div>
+
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                    <div>
+                      <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Your Full Name *</label>
+                      <input type="text" id="session-name" required placeholder="Alex Morgan" class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm">
+                    </div>
+                    <div>
+                      <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Store / Business Name *</label>
+                      <input type="text" id="session-biz-name" required placeholder="Morgan Hardware" class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm">
+                    </div>
+                  </div>
+
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Email For Video Link *</label>
+                      <input type="email" id="session-email" required placeholder="alex@morganhardware.com" class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm">
+                    </div>
+                    <div>
+                      <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Direct Phone Number *</label>
+                      <input type="tel" id="session-phone" required placeholder="+91 98918 75136" class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm">
+                    </div>
+                  </div>
+
+                  <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Current Website / Specific Goals</label>
+                    <input type="text" id="session-notes" placeholder="e.g. Need Google 3-Pack ranking in South Delhi, new custom site" class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm">
+                  </div>
+
+                  <button type="submit" id="confirm-booking-btn" disabled class="w-full py-3.5 rounded-xl font-bold text-navy-950 bg-teal-500 hover:bg-teal-400 glow-teal transition-all text-sm opacity-50 cursor-not-allowed">
+                    Confirm & Reserve 20-Min Call
+                  </button>
+                </form>
+              </div>
+
+              <!-- Booking Success -->
+              <div id="calendar-success" class="py-8 text-center space-y-4 hidden">
+                <div class="w-14 h-14 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
+                  <i data-lucide="calendar-check" class="w-7 h-7"></i>
+                </div>
+                <h4 class="text-2xl font-bold text-navy-950">Session Booked!</h4>
+                <p class="text-sm text-slate-600 max-w-md mx-auto">
+                  We've reserved your slot at <span id="booked-slot-text" class="font-bold text-navy-950">10:00 AM CST</span>. All business details have been dispatched to <span class="font-bold text-teal-600">vecturosupport@gmail.com</span> and calendar invite has been sent to your email.
+                </p>
+                <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-500 max-w-sm mx-auto">
+                  Please have your current web address and Google map pin ready for live screen review.
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- RIGHT COLUMN: CORPORATE CONTACT & TRUST (5 COLS) -->
+          <div class="lg:col-span-5 space-y-6">
+            
+            <div class="bg-navy-900 rounded-3xl p-8 text-white border border-navy-800 shadow-xl space-y-6">
+              <h3 class="text-xl font-bold text-white flex items-center gap-2">
+                <i data-lucide="headphones" class="w-5 h-5 text-teal-400"></i>
+                Vecturo Headquarters
+              </h3>
+              
+              <div class="space-y-4 text-sm text-slate-300">
+                <div class="flex items-start gap-3">
+                  <i data-lucide="phone" class="w-5 h-5 text-teal-400 shrink-0 mt-0.5"></i>
+                  <div>
+                    <div class="font-bold text-white">Direct Phone:</div>
+                    <a href="tel:+919891875136" class="text-teal-300 hover:underline font-mono">+91 98918 75136</a>
+                    <div class="text-[11px] text-slate-400 mt-0.5">Mon–Sat: 9am – 7pm IST</div>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                  <i data-lucide="mail" class="w-5 h-5 text-teal-400 shrink-0 mt-0.5"></i>
+                  <div>
+                    <div class="font-bold text-white">Corporate Inquiries:</div>
+                    <a href="mailto:vecturosupport@gmail.com" class="text-teal-300 hover:underline">vecturosupport@gmail.com</a>
+                    <div class="text-[11px] text-slate-400 mt-0.5">Response within 2 hours</div>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                  <i data-lucide="map-pin" class="w-5 h-5 text-teal-400 shrink-0 mt-0.5"></i>
+                  <div>
+                    <div class="font-bold text-white">Central Operations:</div>
+                    <div>New Delhi, India</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pt-6 border-t border-navy-800">
+                <div class="text-xs uppercase font-extrabold tracking-wider text-teal-400 mb-2">Our SLA Commitment</div>
+                <p class="text-xs text-slate-400 leading-relaxed">
+                  Every submitted inquiry receives a thorough manual inspection by an engineer—never an automated bot reply.
+                </p>
+              </div>
+            </div>
+
+            <!-- Guarantee reminder card -->
+            <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm space-y-3">
+              <div class="flex items-center gap-2 text-teal-600 font-bold text-sm">
+                <i data-lucide="shield-check" class="w-5 h-5"></i>
+                <span>Ironclad 100% Compliance Guarantee</span>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                If your customized digital footprint is not ranking and compliant on Google within 30 days of launch, our agreement includes a 100% money-back refund guarantee.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- GLOBAL FOOTER -->
+  <footer class="bg-navy-950 text-slate-300 pt-16 pb-12 border-t border-navy-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-navy-800">
+        <div class="lg:col-span-2 space-y-4">
+          <img src="assets/logo.png" alt="Vecturo" class="h-10 w-auto">
+          <p class="text-sm text-slate-400 leading-relaxed max-w-sm">
+            Turning offline struggle into structured online dominance. Vecturo arms independent brick-and-mortar storefronts with elite digital ecosystems.
+          </p>
+        </div>
+        <div class="space-y-3">
+          <div class="text-xs uppercase font-extrabold tracking-wider text-white">Ecosystem</div>
+          <ul class="space-y-2 text-sm text-slate-400">
+            <li><a href="services.html#pillar-1" class="hover:text-teal-400">Custom Websites</a></li>
+            <li><a href="services.html#pillar-2" class="hover:text-teal-400">Google 3-Pack SEO</a></li>
+            <li><a href="services.html#pillar-3" class="hover:text-teal-400">Brand & Visual Identity</a></li>
+          </ul>
+        </div>
+        <div class="space-y-3">
+          <div class="text-xs uppercase font-extrabold tracking-wider text-white">Company</div>
+          <ul class="space-y-2 text-sm text-slate-400">
+            <li><a href="about.html" class="hover:text-teal-400">Our Mission</a></li>
+            <li><a href="index.html#calculator-section" class="hover:text-teal-400">Profit Leak Calculator</a></li>
+            <li><a href="contact.html" class="hover:text-teal-400">Discovery Scheduling</a></li>
+          </ul>
+        </div>
+        <div class="space-y-3">
+          <div class="text-xs uppercase font-extrabold tracking-wider text-white">Headquarters</div>
+          <ul class="space-y-2 text-sm text-slate-400">
+            <li class="flex items-center gap-2">
+              <i data-lucide="phone" class="w-3.5 h-3.5 text-teal-400"></i>
+              <a href="tel:+919891875136" class="hover:text-teal-300 font-mono">+91 98918 75136</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="mail" class="w-3.5 h-3.5 text-teal-400"></i>
+              <a href="mailto:vecturosupport@gmail.com" class="hover:text-teal-300">vecturosupport@gmail.com</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="map-pin" class="w-3.5 h-3.5 text-teal-400"></i>
+              <span>New Delhi, India</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="pt-8 text-xs text-slate-500 text-center">
+        © 2026 Vecturo Technologies LLC. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/audit-form.js"></script>
+</body>
+</html>

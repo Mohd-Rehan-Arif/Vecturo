@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vecturo — Accelerating Local Growth | Modern B2B Web & SEO</title>
+  <meta name="description" content="Vecturo bridges the gap between traditional brick-and-mortar storefronts and modern digital infrastructure. Turn offline struggle into structured online dominance.">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: {
+              950: '#061325',
+              900: '#0A2540',
+              800: '#0F355C',
+              700: '#174E82',
+              600: '#2063A5',
+            },
+            teal: {
+              400: '#26E0C2',
+              500: '#00D4B2',
+              600: '#00B89A',
+              700: '#0D9488',
+            },
+            cyan: {
+              400: '#22D3EE',
+              500: '#06B6D4',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-[#FAFAFC] text-slate-800 antialiased flex flex-col min-h-screen">
+
+  <!-- ================= TOP ANNOUNCEMENT BANNER ================= -->
+  <div class="bg-gradient-to-r from-navy-950 via-navy-900 to-navy-950 text-white text-xs sm:text-sm py-2 px-4 border-b border-navy-800/80">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-teal-500 text-navy-900 uppercase tracking-wide">Q4 Initiative</span>
+        <span class="text-slate-200 hidden sm:inline">Guaranteed Local Google 3-Pack Compliance or 100% Refund.</span>
+        <span class="text-slate-200 sm:hidden">Guaranteed Local 3-Pack Compliance.</span>
+      </div>
+      <a href="contact.html" class="inline-flex items-center gap-1 font-semibold text-teal-400 hover:text-teal-300 transition-colors">
+        Claim 1 of 5 Monthly Audit Slots <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- ================= HEADER & NAVIGATION ================= -->
+  <header id="site-header" class="sticky top-0 z-40 transition-all duration-300 bg-white/95 backdrop-blur-md border-b border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3 group">
+          <img src="assets/logo.png" alt="Vecturo Logo" class="h-12 md:h-[48px] w-auto object-contain transition-transform duration-200 group-hover:scale-105">
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center space-x-8">
+          <a href="index.html" class="nav-link text-sm font-semibold text-slate-700 hover:text-teal-600 transition-colors">Home</a>
+          <a href="services.html" class="nav-link text-sm font-medium text-slate-600 hover:text-teal-600 transition-colors">Services</a>
+          <a href="#calculator-section" class="text-sm font-medium text-slate-600 hover:text-teal-600 transition-colors">ROI Calculator</a>
+          <a href="about.html" class="nav-link text-sm font-medium text-slate-600 hover:text-teal-600 transition-colors">About Us</a>
+          <a href="contact.html" class="nav-link text-sm font-medium text-slate-600 hover:text-teal-600 transition-colors">Contact</a>
+        </nav>
+
+        <!-- CTA & Actions -->
+        <div class="hidden md:flex items-center gap-4">
+          <a href="tel:+919891875136" class="text-xs font-semibold text-slate-500 hover:text-navy-900 flex items-center gap-1 font-mono">
+            <i data-lucide="phone" class="w-3.5 h-3.5 text-teal-600"></i> +91 98918 75136
+          </a>
+          <a href="contact.html" class="inline-flex items-center justify-center px-5 py-2.5 rounded-lg text-sm font-semibold text-navy-950 bg-teal-500 hover:bg-teal-400 glow-teal transition-all duration-200 transform hover:-translate-y-0.5">
+            Claim Free Audit
+          </a>
+        </div>
+
+        <!-- Mobile Menu Trigger -->
+        <button id="mobile-menu-btn" type="button" class="md:hidden p-2 rounded-lg text-slate-600 hover:text-navy-900 hover:bg-slate-100 focus:outline-none" aria-label="Open mobile navigation">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-menu" class="fixed inset-0 z-50 bg-navy-950/80 backdrop-blur-sm hidden">
+    <div class="fixed top-0 right-0 w-full max-w-sm h-full bg-white shadow-2xl p-6 flex flex-col justify-between">
+      <div>
+        <div class="flex items-center justify-between pb-6 border-b border-slate-100">
+          <img src="assets/logo.png" alt="Vecturo" class="h-12 w-auto">
+          <button id="close-mobile-menu" class="p-2 text-slate-400 hover:text-slate-700">
+            <i data-lucide="x" class="w-6 h-6"></i>
+          </button>
+        </div>
+        <nav class="mt-6 flex flex-col space-y-4">
+          <a href="index.html" class="mobile-nav-link text-lg font-semibold text-navy-900 hover:text-teal-600">Home</a>
+          <a href="services.html" class="mobile-nav-link text-lg font-medium text-slate-600 hover:text-teal-600">Services</a>
+          <a href="#calculator-section" class="mobile-nav-link text-lg font-medium text-slate-600 hover:text-teal-600">ROI Calculator</a>
+          <a href="about.html" class="mobile-nav-link text-lg font-medium text-slate-600 hover:text-teal-600">About Us</a>
+          <a href="contact.html" class="mobile-nav-link text-lg font-medium text-slate-600 hover:text-teal-600">Contact & Audit</a>
+        </nav>
+      </div>
+      <div class="pt-6 border-t border-slate-100 space-y-3">
+        <a href="tel:+919891875136" class="w-full inline-flex items-center justify-center gap-2 py-3 rounded-xl border border-slate-300 font-bold text-navy-950 hover:bg-slate-50 text-sm">
+          <i data-lucide="phone" class="w-4 h-4 text-teal-600"></i> +91 98918 75136
+        </a>
+        <a href="contact.html" class="w-full inline-flex items-center justify-center py-3 rounded-lg font-bold text-navy-950 bg-teal-500 hover:bg-teal-400">
+          Claim Free Audit
+        </a>
+        <p class="text-xs text-center text-slate-400">Accelerating Local Growth © Vecturo</p>
+      </div>
+    </div>
+  </div>
+
+  <main class="flex-grow">
+    <!-- ================= HERO SECTION ================= -->
+    <section class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden bg-gradient-to-b from-white via-slate-50 to-slate-100/60 bg-grid-pattern">
+      <!-- Glow ambient background blobs -->
+      <div class="absolute -top-40 right-0 w-96 h-96 bg-teal-400/20 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute top-1/2 -left-20 w-80 h-80 bg-navy-900/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          
+          <!-- Hero Left Column: Copy & CTAs -->
+          <div class="lg:col-span-7 space-y-8">
+            <!-- Strategic Badge -->
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-navy-900/5 border border-navy-900/10 text-xs font-semibold text-navy-900">
+              <span class="w-2 h-2 rounded-full bg-teal-500 animate-pulse"></span>
+              B2B Local Business Dominance Architecture
+            </div>
+
+            <!-- Main Headline -->
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-navy-950 tracking-tight leading-[1.12]">
+              Bring Your Business Online. <br>
+              <span class="text-gradient">Bring Your Customers Back.</span>
+            </h1>
+
+            <!-- Sub-headline -->
+            <p class="text-lg sm:text-xl text-slate-600 leading-relaxed font-normal max-w-2xl">
+              Thousands of local businesses lose half their profits simply because they lack a digital footprint. Vecturo builds your custom website, designs your brand, configures your Google optimization profile, and instantly hooks you into your local customer market.
+            </p>
+
+            <!-- Dual Action CTAs -->
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+              <a href="contact.html" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-base font-bold text-navy-950 bg-teal-500 hover:bg-teal-400 glow-teal transition-all duration-200 transform hover:-translate-y-0.5">
+                <span>Claim Your Digital Footprint Now</span>
+                <i data-lucide="arrow-right" class="w-5 h-5"></i>
+              </a>
+              <a href="services.html" class="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl text-base font-semibold text-navy-900 bg-white border border-slate-300 hover:border-navy-900 hover:bg-slate-50 transition-all duration-200">
+                <i data-lucide="layers" class="w-5 h-5 text-teal-600"></i>
+                <span>Explore Solutions</span>
+              </a>
+            </div>
+
+            <!-- Micro Trust Indicators -->
+            <div class="pt-6 border-t border-slate-200 flex flex-wrap items-center gap-6 text-xs text-slate-500 font-medium">
+              <div class="flex items-center gap-1.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-teal-600"></i>
+                <span>Zero Slow Agency Bloat</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-teal-600"></i>
+                <span>Google 3-Pack Guaranteed</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-teal-600"></i>
+                <span>Sub-Second Page Load Speeds</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Right Column: High-Impact Visual Card -->
+          <div class="lg:col-span-5 relative">
+            <div class="relative mx-auto max-w-md lg:max-w-none">
+              <!-- Glow backdrop -->
+              <div class="absolute -inset-1.5 bg-gradient-to-r from-teal-500 to-navy-900 rounded-3xl blur opacity-30"></div>
+
+              <!-- Main Card Container -->
+              <div class="relative bg-navy-900 rounded-2xl p-6 sm:p-8 text-white shadow-2xl border border-navy-800">
+                <div class="flex items-center justify-between pb-6 border-b border-navy-800">
+                  <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-teal-500/20 border border-teal-500/40 flex items-center justify-center text-teal-400">
+                      <i data-lucide="map-pin" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                      <div class="text-xs uppercase tracking-wider text-teal-400 font-bold">Local Market Pulse</div>
+                      <div class="text-sm font-semibold text-white">Your Territory Radians</div>
+                    </div>
+                  </div>
+                  <span class="inline-flex items-center px-2.5 py-1 rounded-full text-[11px] font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                    Live Diagnostic
+                  </span>
+                </div>
+
+                <!-- Metrics breakdown -->
+                <div class="space-y-5 my-6">
+                  <div class="bg-navy-950/80 rounded-xl p-4 border border-navy-800 flex items-center justify-between">
+                    <div>
+                      <div class="text-xs text-slate-400">Offline Consumer Discovery</div>
+                      <div class="text-xl font-bold text-rose-400">82% Invisible</div>
+                    </div>
+                    <div class="text-right">
+                      <div class="text-[11px] text-slate-400">Status</div>
+                      <div class="text-xs font-semibold text-rose-300 bg-rose-500/20 px-2 py-0.5 rounded">Severe Leak</div>
+                    </div>
+                  </div>
+
+                  <div class="bg-navy-950/80 rounded-xl p-4 border border-navy-800 flex items-center justify-between">
+                    <div>
+                      <div class="text-xs text-slate-400">Google 3-Pack Local Inquiries</div>
+                      <div class="text-xl font-bold text-teal-400">+210% Capture</div>
+                    </div>
+                    <div class="text-right">
+                      <div class="text-[11px] text-slate-400">With Vecturo</div>
+                      <div class="text-xs font-semibold text-teal-300 bg-teal-500/20 px-2 py-0.5 rounded">Dominant</div>
+                    </div>
+                  </div>
+
+                  <div class="bg-navy-950/80 rounded-xl p-4 border border-navy-800 flex items-center justify-between">
+                    <div>
+                      <div class="text-xs text-slate-400">Customer Turnaround Speed</div>
+                      <div class="text-xl font-bold text-white">&lt; 0.8s Load</div>
+                    </div>
+                    <div class="text-right">
+                      <div class="text-[11px] text-slate-400">Benchmark</div>
+                      <div class="text-xs font-semibold text-emerald-300 bg-emerald-500/20 px-2 py-0.5 rounded">Core Vitals Pass</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Interactive Card Footer CTA -->
+                <div class="pt-4 border-t border-navy-800 flex items-center justify-between">
+                  <div class="text-xs text-slate-400">Target Entity: <span class="text-white font-medium">B2B Local Scale</span></div>
+                  <a href="#problem-section" class="text-xs font-bold text-teal-400 hover:text-teal-300 flex items-center gap-1">
+                    Analyze The Leak <i data-lucide="chevron-down" class="w-3.5 h-3.5"></i>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Floating decorative badge -->
+              <div class="absolute -bottom-5 -left-5 bg-white rounded-xl shadow-xl border border-slate-200 p-3.5 flex items-center gap-3 hidden sm:flex">
+                <div class="w-8 h-8 rounded-lg bg-teal-500 flex items-center justify-center text-navy-950">
+                  <i data-lucide="shield-check" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <div class="text-xs font-bold text-navy-950">100% Guaranteed</div>
+                  <div class="text-[10px] text-slate-500">Local Compliance Day 1</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= THE CORE PROBLEM SECTION ================= -->
+    <section id="problem-section" class="py-20 md:py-28 bg-white border-y border-slate-200/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="max-w-3xl mx-auto text-center space-y-4 mb-16">
+          <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-rose-50 text-rose-700 border border-rose-200">
+            The Bleeding Reality
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy-950 tracking-tight">
+            The Trillion-Dollar Leak in Local Business
+          </h2>
+          <p class="text-lg text-slate-600 leading-relaxed">
+            Great products and elite services aren't enough anymore. If your business isn't easily searchable, discoverable, and interactive online, you're practically invisible to <span class="font-bold text-rose-600">82% of modern consumers</span>. You are giving up massive profit margins to weaker competitors who simply happened to set up a website first.
+          </p>
+        </div>
+
+        <!-- Problem vs Vecturo Comparison Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+          
+          <!-- Column 1: The Offline Struggle -->
+          <div class="rounded-2xl p-8 bg-rose-50/50 border border-rose-200/80 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-3 mb-6">
+                <div class="w-10 h-10 rounded-xl bg-rose-100 flex items-center justify-center text-rose-600">
+                  <i data-lucide="alert-triangle" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-slate-900">The Offline Struggle</h3>
+                  <p class="text-xs text-rose-700 font-semibold uppercase tracking-wider">Default Trajectory</p>
+                </div>
+              </div>
+
+              <ul class="space-y-4 text-sm text-slate-700">
+                <li class="flex items-start gap-3">
+                  <i data-lucide="x-circle" class="w-5 h-5 text-rose-500 shrink-0 mt-0.5"></i>
+                  <span><strong>Invisible on High-Intent Searches:</strong> When nearby shoppers search "best service near me", your storefront never appears on the Google 3-Pack map.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <i data-lucide="x-circle" class="w-5 h-5 text-rose-500 shrink-0 mt-0.5"></i>
+                  <span><strong>Template Site Friction:</strong> Bloated DIY builders take 5+ seconds to load on smartphones, causing 53% of prospects to bounce immediately.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <i data-lucide="x-circle" class="w-5 h-5 text-rose-500 shrink-0 mt-0.5"></i>
+                  <span><strong>Leaking Margin to Mediocre Rivals:</strong> Inferior local shops with aggressive SEO harvest the highest-margin walk-ins and phone calls.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <i data-lucide="x-circle" class="w-5 h-5 text-rose-500 shrink-0 mt-0.5"></i>
+                  <span><strong>Zero Conversion Infrastructure:</strong> No click-to-call direct routing, no booking widgets, and unmanaged negative or missing reviews.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-rose-200 text-xs font-semibold text-rose-800 flex items-center justify-between">
+              <span>Estimated Margin Loss:</span>
+              <span class="text-base font-extrabold text-rose-600">-40% to -60% Net Profit</span>
+            </div>
+          </div>
+
+          <!-- Column 2: The Vecturo Dominance Model -->
+          <div class="rounded-2xl p-8 bg-navy-900 text-white border border-navy-800 flex flex-col justify-between shadow-xl relative overflow-hidden">
+            <!-- Background glow -->
+            <div class="absolute -right-20 -bottom-20 w-64 h-64 bg-teal-500/10 rounded-full blur-2xl pointer-events-none"></div>
+
+            <div class="relative z-10">
+              <div class="flex items-center gap-3 mb-6">
+                <div class="w-10 h-10 rounded-xl bg-teal-500/20 border border-teal-500/30 flex items-center justify-center text-teal-400">
+                  <i data-lucide="zap" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-white">The Vecturo Dominance Model</h3>
+                  <p class="text-xs text-teal-400 font-semibold uppercase tracking-wider">Engineered Infrastructure</p>
+                </div>
+              </div>
+
+              <ul class="space-y-4 text-sm text-slate-300">
+                <li class="flex items-start gap-3">
+                  <i data-lucide="check-circle" class="w-5 h-5 text-teal-400 shrink-0 mt-0.5"></i>
+                  <span><strong>Dominant Local 3-Pack Presence:</strong> Verified, geo-tagged, and optimized so your phone rings whenever high-intent buyers search in your zip code.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <i data-lucide="check-circle" class="w-5 h-5 text-teal-400 shrink-0 mt-0.5"></i>
+                  <span><strong>Production-Grade Handcrafted Code:</strong> Blisteringly fast (&lt;0.8s) mobile-first architecture built to maximize Google Core Web Vitals score.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <i data-lucide="check-circle" class="w-5 h-5 text-teal-400 shrink-0 mt-0.5"></i>
+                  <span><strong>Recover Lost Profit Margins:</strong> Recapture the customers being siphoned away, establishing authority that commands premium pricing.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <i data-lucide="check-circle" class="w-5 h-5 text-teal-400 shrink-0 mt-0.5"></i>
+                  <span><strong>Automated Conversion Pipeline:</strong> Built-in intake forms, calendar integration, automated SMS review generation, and customer CRM linking.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-navy-800 text-xs font-semibold text-slate-300 flex items-center justify-between relative z-10">
+              <span>Projected Impact:</span>
+              <span class="text-base font-extrabold text-teal-400">+180% to +310% Local Reach</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= THE THREE-TIER SOLUTION (OUR SERVICES) ================= -->
+    <section class="py-20 md:py-28 bg-[#FAFAFC]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-3xl mx-auto text-center space-y-4 mb-16">
+          <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-teal-500/10 text-teal-700 border border-teal-500/20">
+            The Three-Tier Solution
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy-950 tracking-tight">
+            Engineered Specifically For Local Market Leadership
+          </h2>
+          <p class="text-lg text-slate-600 leading-relaxed">
+            We don't hand off bloated WordPress templates or leave you to figure out settings. We deploy an end-to-end digital pipeline designed for immediate customer acquisition.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- Pillar 1: Production-Grade Custom Websites -->
+          <div class="bg-white rounded-2xl p-8 border border-slate-200/90 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+            <div>
+              <div class="w-14 h-14 rounded-2xl bg-navy-900 text-teal-400 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform duration-300">
+                <i data-lucide="code-2" class="w-7 h-7"></i>
+              </div>
+              <div class="text-xs uppercase tracking-wider text-teal-600 font-extrabold mb-1">Pillar 01</div>
+              <h3 class="text-2xl font-bold text-navy-950 mb-3">Production-Grade Custom Websites</h3>
+              <p class="text-sm text-slate-600 leading-relaxed mb-6">
+                Not generic builders. We handcraft fully optimized, blistering-fast web ecosystems tailored to capture local search traffic, convert mobile visitors, and dominate Core Web Vitals.
+              </p>
+              
+              <ul class="space-y-3 text-xs text-slate-700 pt-4 border-t border-slate-100">
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-teal-600"></i>
+                  <span>Sub-second page loading speed (&lt;0.8s)</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-teal-600"></i>
+                  <span>Mobile-first responsive UX with click-to-call</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-teal-600"></i>
+                  <span>Structured Schema.org local business markup</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-teal-600"></i>
+                  <span>CRM & intake form automated routing</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-slate-100">
+              <a href="services.html#pillar-1" class="inline-flex items-center gap-2 text-sm font-bold text-navy-900 group-hover:text-teal-600 transition-colors">
+                Explore Website Engine <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Pillar 2: Bulletproof Google Profile Optimization -->
+          <div class="bg-white rounded-2xl p-8 border-2 border-teal-500 shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group relative">
+            <div class="absolute -top-3.5 right-6 px-3 py-1 rounded-full text-[11px] font-extrabold bg-teal-500 text-navy-950 uppercase tracking-wider">
+              High-Intent Focus
+            </div>
+            
+            <div>
+              <div class="w-14 h-14 rounded-2xl bg-teal-500 text-navy-950 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform duration-300">
+                <i data-lucide="map" class="w-7 h-7"></i>
+              </div>
+              <div class="text-xs uppercase tracking-wider text-teal-600 font-extrabold mb-1">Pillar 02</div>
+              <h3 class="text-2xl font-bold text-navy-950 mb-3">Bulletproof Google Profile Optimization</h3>
+              <p class="text-sm text-slate-600 leading-relaxed mb-6">
+                We put your business directly on the map. Capture high-intent customers exactly when they search for services near them, driving calls, footfall, and discovery.
+              </p>
+
+              <ul class="space-y-3 text-xs text-slate-700 pt-4 border-t border-slate-100">
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-teal-600"></i>
+                  <span>Google 3-Pack rank acceleration</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-teal-600"></i>
+                  <span>Geo-targeted keyword citation sync</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-teal-600"></i>
+                  <span>Automated 5-star customer review funnel</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-teal-600"></i>
+                  <span>Apple Maps, Bing & local directory syndication</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-slate-100">
+              <a href="services.html#pillar-2" class="inline-flex items-center gap-2 text-sm font-bold text-navy-900 group-hover:text-teal-600 transition-colors">
+                Explore Local SEO Engine <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Pillar 3: Iconic Brand & Visual Identity Design -->
+          <div class="bg-white rounded-2xl p-8 border border-slate-200/90 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+            <div>
+              <div class="w-14 h-14 rounded-2xl bg-navy-900 text-teal-400 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform duration-300">
+                <i data-lucide="sparkles" class="w-7 h-7"></i>
+              </div>
+              <div class="text-xs uppercase tracking-wider text-teal-600 font-extrabold mb-1">Pillar 03</div>
+              <h3 class="text-2xl font-bold text-navy-950 mb-3">Iconic Brand & Visual Identity Design</h3>
+              <p class="text-sm text-slate-600 leading-relaxed mb-6">
+                Stand out with striking custom logos, premium brand guidelines, and high-converting marketing assets that earn instant community trust and command premium prices.
+              </p>
+
+              <ul class="space-y-3 text-xs text-slate-700 pt-4 border-t border-slate-100">
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-teal-600"></i>
+                  <span>Custom vector logo suites & icon marks</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-teal-600"></i>
+                  <span>Complete typography & color authority system</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-teal-600"></i>
+                  <span>Storefront signage & vehicle vinyl kits</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <i data-lucide="check" class="w-4 h-4 text-teal-600"></i>
+                  <span>Social media asset launch package</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-slate-100">
+              <a href="services.html#pillar-3" class="inline-flex items-center gap-2 text-sm font-bold text-navy-900 group-hover:text-teal-600 transition-colors">
+                Explore Identity Systems <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= INTERACTIVE ROI / REVENUE LEAK CALCULATOR ================= -->
+    <section id="calculator-section" class="py-20 md:py-28 bg-gradient-to-br from-navy-950 via-navy-900 to-navy-950 text-white relative overflow-hidden bg-grid-pattern-dark">
+      <!-- Glow circles -->
+      <div class="absolute -top-32 left-1/4 w-96 h-96 bg-teal-500/15 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <div class="max-w-3xl mx-auto text-center space-y-4 mb-16">
+          <div class="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-bold bg-teal-500/20 text-teal-300 border border-teal-500/30">
+            Interactive Financial Model
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
+            How Much Margin Is Your Storefront Leaking?
+          </h2>
+          <p class="text-lg text-slate-300 leading-relaxed">
+            Drag the sliders to model your current monthly customer volume and average ticket size. See exactly what lacking a top-tier digital footprint is costing your business.
+          </p>
+        </div>
+
+        <div class="max-w-5xl mx-auto bg-navy-900/90 rounded-3xl p-6 sm:p-10 lg:p-12 border border-navy-800 shadow-2xl backdrop-blur-xl">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+            
+            <!-- Sliders Inputs (Left Column) -->
+            <div class="lg:col-span-7 space-y-8">
+              
+              <!-- Industry Selector -->
+              <div>
+                <label for="calc-industry" class="block text-xs font-bold uppercase tracking-wider text-teal-400 mb-2">
+                  Business Industry / Category
+                </label>
+                <select id="calc-industry" class="w-full bg-navy-950 border border-navy-700 rounded-xl px-4 py-3 text-white font-medium focus:outline-none focus:border-teal-400">
+                  <option value="retail">Retail, Artisan Store, Bakery & Dining</option>
+                  <option value="healthcare">Dental, Medical & Wellness Clinics</option>
+                  <option value="services">Specialized Contractor & Professional Services</option>
+                  <option value="auto">Automotive Care & Mechanical Centers</option>
+                  <option value="other">General Local Boutique & Trade</option>
+                </select>
+              </div>
+
+              <!-- Slider 1: Monthly Footfall -->
+              <div class="space-y-3">
+                <div class="flex items-center justify-between">
+                  <label for="calc-footfall" class="text-sm font-semibold text-slate-200">
+                    Monthly In-Store Customers / Footfall:
+                  </label>
+                  <span id="calc-footfall-val" class="text-xl font-bold text-teal-400 font-mono">850</span>
+                </div>
+                <input id="calc-footfall" type="range" min="100" max="5000" step="50" value="850" class="w-full">
+                <div class="flex justify-between text-[11px] text-slate-400 font-mono">
+                  <span>100</span>
+                  <span>2,500</span>
+                  <span>5,000+</span>
+                </div>
+              </div>
+
+              <!-- Slider 2: Average Order Value -->
+              <div class="space-y-3">
+                <div class="flex items-center justify-between">
+                  <label for="calc-ticket" class="text-sm font-semibold text-slate-200">
+                    Average Order / Transaction Value ($):
+                  </label>
+                  <span id="calc-ticket-val" class="text-xl font-bold text-teal-400 font-mono">$95</span>
+                </div>
+                <input id="calc-ticket" type="range" min="15" max="1500" step="5" value="95" class="w-full">
+                <div class="flex justify-between text-[11px] text-slate-400 font-mono">
+                  <span>$15</span>
+                  <span>$750</span>
+                  <span>$1,500+</span>
+                </div>
+              </div>
+
+              <div class="p-4 rounded-xl bg-navy-950/70 border border-navy-800 text-xs text-slate-400 leading-relaxed flex items-center gap-3">
+                <i data-lucide="info" class="w-5 h-5 text-teal-400 shrink-0"></i>
+                <span>Calculations use local market search intent saturation: 82% of neighborhood buyers research online prior to purchase.</span>
+              </div>
+            </div>
+
+            <!-- Output Metric Dashboard (Right Column) -->
+            <div class="lg:col-span-5 bg-navy-950 rounded-2xl p-6 sm:p-8 border border-navy-800/90 shadow-xl space-y-6">
+              
+              <div>
+                <div class="text-xs uppercase tracking-wider text-rose-400 font-bold mb-1">
+                  Estimated Missed Customers / Mo
+                </div>
+                <div class="text-3xl font-extrabold text-white flex items-baseline gap-2">
+                  <span id="calc-lost-customers">58</span>
+                  <span class="text-xs font-normal text-slate-400">buyers captured by rivals</span>
+                </div>
+              </div>
+
+              <div class="pt-4 border-t border-navy-800">
+                <div class="text-xs uppercase tracking-wider text-rose-400 font-bold mb-1">
+                  Monthly Revenue Leak
+                </div>
+                <div id="calc-monthly-leak" class="text-3xl font-extrabold text-rose-400 font-mono">
+                  $5,510
+                </div>
+                <div class="text-xs text-slate-400 mt-0.5">
+                  Annualized: <span id="calc-annual-leak" class="font-bold text-white">$66,120</span> in lost profits
+                </div>
+              </div>
+
+              <div class="p-4 rounded-xl bg-teal-500/10 border border-teal-500/30">
+                <div class="text-xs uppercase tracking-wider text-teal-300 font-bold mb-1">
+                  Projected 90-Day Recovery with Vecturo
+                </div>
+                <div id="calc-recovery-90d" class="text-3xl font-extrabold text-teal-400 font-mono">
+                  $10,745
+                </div>
+                <div class="text-[11px] text-teal-200/80 mt-1">
+                  Recoverable margins via Google 3-Pack rank + fast mobile funnel.
+                </div>
+              </div>
+
+              <button id="calc-claim-btn" class="w-full py-4 rounded-xl font-bold text-navy-950 bg-teal-500 hover:bg-teal-400 glow-teal transition-all text-sm flex items-center justify-center gap-2">
+                <span>Plug This Leak Now</span>
+                <i data-lucide="arrow-down" class="w-4 h-4"></i>
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= SOCIAL PROOF / GUARANTEE SECTION ================= -->
+    <section class="py-20 md:py-28 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <div class="lg:col-span-5 space-y-6">
+            <div class="inline-flex items-center px-3.5 py-1 rounded-full text-xs font-bold bg-navy-900/5 text-navy-900 border border-navy-900/10">
+              Ironclad Digital Migration
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-950 tracking-tight">
+              Zero Guesswork. Guaranteed Local Compliance.
+            </h2>
+            <p class="text-slate-600 leading-relaxed text-base">
+              We don't just deliver files and leave you to figure out hosting; we establish living digital pipelines that predictably recover lost margins. Guaranteed local optimization compliance from day one.
+            </p>
+
+            <div class="space-y-4 pt-2">
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-teal-500/20 text-teal-600 flex items-center justify-center shrink-0 mt-1">
+                  <i data-lucide="shield-alert" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-navy-950">100% Risk Reversal Guarantee</h4>
+                  <p class="text-xs text-slate-500 mt-0.5">If your customized local digital footprint is not ranking and compliant within 30 days, we refund 100% of your onboarding fee.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-lg bg-teal-500/20 text-teal-600 flex items-center justify-center shrink-0 mt-1">
+                  <i data-lucide="clock" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-navy-950">Turnkey Handover Within 21 Days</h4>
+                  <p class="text-xs text-slate-500 mt-0.5">We don't take 6 months like legacy corporate agencies. Your business goes live and starts capturing local search in under three weeks.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-4">
+              <a href="services.html" class="inline-flex items-center gap-2 text-sm font-bold text-teal-600 hover:text-teal-700">
+                Explore our full technical roadmap <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Guaranteed Deliverables Grid (No Testimonials) -->
+          <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+            
+            <!-- Pillar 1 Guarantee Card -->
+            <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 space-y-3">
+              <div class="w-10 h-10 rounded-xl bg-teal-500/20 text-teal-700 flex items-center justify-center font-bold">
+                <i data-lucide="map-pin" class="w-5 h-5"></i>
+              </div>
+              <h4 class="text-base font-bold text-navy-950">Google 3-Pack Supremacy</h4>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Complete profile verification, keyword categorization, and automated review collection cards to push your storefront to position #1 in your local service radius.
+              </p>
+              <div class="text-[11px] font-bold text-teal-700 flex items-center gap-1">
+                <i data-lucide="check" class="w-3.5 h-3.5"></i> Day 1 Compliance Included
+              </div>
+            </div>
+
+            <!-- Pillar 2 Guarantee Card -->
+            <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 space-y-3">
+              <div class="w-10 h-10 rounded-xl bg-teal-500/20 text-teal-700 flex items-center justify-center font-bold">
+                <i data-lucide="gauge" class="w-5 h-5"></i>
+              </div>
+              <h4 class="text-base font-bold text-navy-950">Sub-Second Load Benchmark</h4>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Pure reactive architecture passing all Google Core Web Vitals with 99+ score. Loads instantly on smartphones to convert 82% of high-intent searchers.
+              </p>
+              <div class="text-[11px] font-bold text-teal-700 flex items-center gap-1">
+                <i data-lucide="check" class="w-3.5 h-3.5"></i> &lt;0.8s Speed Guarantee
+              </div>
+            </div>
+
+            <!-- Pillar 3 Guarantee Card -->
+            <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 space-y-3">
+              <div class="w-10 h-10 rounded-xl bg-teal-500/20 text-teal-700 flex items-center justify-center font-bold">
+                <i data-lucide="share-2" class="w-5 h-5"></i>
+              </div>
+              <h4 class="text-base font-bold text-navy-950">50+ Directory Sync</h4>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Consistent Name, Address, and Phone (NAP) synchronization across Apple Maps, Bing, Yelp, and local chamber registries with zero citation drift.
+              </p>
+              <div class="text-[11px] font-bold text-teal-700 flex items-center gap-1">
+                <i data-lucide="check" class="w-3.5 h-3.5"></i> Zero Citation Errors
+              </div>
+            </div>
+
+            <!-- Pillar 4 Guarantee Card -->
+            <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 space-y-3">
+              <div class="w-10 h-10 rounded-xl bg-teal-500/20 text-teal-700 flex items-center justify-center font-bold">
+                <i data-lucide="code" class="w-5 h-5"></i>
+              </div>
+              <h4 class="text-base font-bold text-navy-950">Schema.org Microdata</h4>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Direct structured JSON-LD microdata embedded for Google crawlers, ensuring your opening hours, products, and direct booking appear right in Google search snippets.
+              </p>
+              <div class="text-[11px] font-bold text-teal-700 flex items-center gap-1">
+                <i data-lucide="check" class="w-3.5 h-3.5"></i> LocalBusiness Validated
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= LEAD GENERATION AUDIT WIZARD ================= -->
+    <section id="audit-section" class="py-20 md:py-28 bg-[#F3F4F6] border-t border-slate-200">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center space-y-3 mb-12">
+          <span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-navy-900 text-teal-400 uppercase tracking-wider">
+            Diagnostic Intake
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-950">
+            Claim Your Free Digital Footprint Audit
+          </h2>
+          <p class="text-sm sm:text-base text-slate-600 max-w-xl mx-auto">
+            Get an engineered 8-page diagnostic covering your local Google rank, page speed deficit, competitor leaks, and 90-day profit recovery blueprint.
+          </p>
+        </div>
+
+        <!-- Wizard Container -->
+        <div class="bg-white rounded-3xl p-6 sm:p-10 shadow-xl border border-slate-200">
+          
+          <form id="vecturo-audit-form" class="space-y-6">
+            <input type="hidden" id="form-revenue-note" value="">
+
+            <!-- STEP 1: Business Fundamentals -->
+            <div id="step-1" class="space-y-6">
+              <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+                <span class="text-xs font-bold text-teal-600 uppercase tracking-wider">Step 1 of 3: Business Details</span>
+                <span class="text-xs text-slate-400">100% Confidential</span>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="audit-biz-name" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
+                    Business Name *
+                  </label>
+                  <input type="text" id="audit-biz-name" required placeholder="e.g. Apex Auto Specialists" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:border-teal-500 font-medium text-sm">
+                </div>
+
+                <div>
+                  <label for="audit-city" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
+                    City / Target Metro *
+                  </label>
+                  <input type="text" id="audit-city" required placeholder="e.g. New Delhi, India" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:border-teal-500 font-medium text-sm">
+                </div>
+              </div>
+
+              <div>
+                <label for="audit-category" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
+                  Primary Service or Product Category
+                </label>
+                <input type="text" id="audit-category" placeholder="e.g. Independent Auto Repair, Artisan Bakery, Dental Clinic" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:border-teal-500 font-medium text-sm">
+              </div>
+
+              <div class="pt-4 flex justify-end">
+                <button type="button" id="to-step-2-btn" class="px-6 py-3 rounded-xl text-sm font-bold bg-navy-900 text-teal-400 hover:bg-navy-950 flex items-center gap-2">
+                  <span>Next: Current Web Status</span>
+                  <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- STEP 2: Current Digital Footprint Status -->
+            <div id="step-2" class="space-y-6 hidden">
+              <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+                <span class="text-xs font-bold text-teal-600 uppercase tracking-wider">Step 2 of 3: Digital Presence</span>
+                <span class="text-xs text-slate-400">Takes 20 seconds</span>
+              </div>
+
+              <div>
+                <label for="audit-current-url" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
+                  Current Website URL (if any)
+                </label>
+                <input type="text" id="audit-current-url" placeholder="https://yourstore.com (Leave blank if none)" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:border-teal-500 font-medium text-sm">
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                  Do you currently have an active Google Business Profile on Maps?
+                </label>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                  <label class="flex items-center gap-2 p-3 rounded-xl border border-slate-200 cursor-pointer hover:bg-slate-50 text-xs font-semibold">
+                    <input type="radio" name="gbp_status" value="verified" checked class="text-teal-600">
+                    <span>Yes, verified</span>
+                  </label>
+                  <label class="flex items-center gap-2 p-3 rounded-xl border border-slate-200 cursor-pointer hover:bg-slate-50 text-xs font-semibold">
+                    <input type="radio" name="gbp_status" value="unclaimed" class="text-teal-600">
+                    <span>Unclaimed / Old</span>
+                  </label>
+                  <label class="flex items-center gap-2 p-3 rounded-xl border border-slate-200 cursor-pointer hover:bg-slate-50 text-xs font-semibold">
+                    <input type="radio" name="gbp_status" value="none" class="text-teal-600">
+                    <span>Not sure / None</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="pt-4 flex items-center justify-between">
+                <button type="button" id="back-to-step-1-btn" class="px-5 py-2.5 rounded-xl text-xs font-semibold text-slate-600 hover:bg-slate-100">
+                  Back
+                </button>
+                <button type="button" id="to-step-3-btn" class="px-6 py-3 rounded-xl text-sm font-bold bg-navy-900 text-teal-400 hover:bg-navy-950 flex items-center gap-2">
+                  <span>Next: Delivery Destination</span>
+                  <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- STEP 3: Contact & Report Dispatch -->
+            <div id="step-3" class="space-y-6 hidden">
+              <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+                <span class="text-xs font-bold text-teal-600 uppercase tracking-wider">Step 3 of 3: Deliver Your Audit</span>
+                <span class="text-xs text-slate-400">Zero Spam Guaranteed</span>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="audit-contact-name" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
+                    Your Name *
+                  </label>
+                  <input type="text" id="audit-contact-name" required placeholder="John Miller" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:border-teal-500 font-medium text-sm">
+                </div>
+
+                <div>
+                  <label for="audit-phone" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
+                    Direct Phone Number *
+                  </label>
+                  <input type="tel" id="audit-phone" required placeholder="(555) 000-0000" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:border-teal-500 font-medium text-sm">
+                </div>
+              </div>
+
+              <div>
+                <label for="audit-email" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
+                  Business Email (Where report is sent) *
+                </label>
+                <input type="email" id="audit-email" required placeholder="john@apexauto.com" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:border-teal-500 font-medium text-sm">
+              </div>
+
+              <div class="pt-4 flex items-center justify-between">
+                <button type="button" id="back-to-step-2-btn" class="px-5 py-2.5 rounded-xl text-xs font-semibold text-slate-600 hover:bg-slate-100">
+                  Back
+                </button>
+                <button type="submit" id="submit-audit-btn" class="px-8 py-3.5 rounded-xl text-sm font-bold bg-teal-500 text-navy-950 hover:bg-teal-400 glow-teal flex items-center gap-2">
+                  <span>Run Live Diagnostic & Claim Audit</span>
+                  <i data-lucide="sparkles" class="w-4 h-4"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- SIMULATED SCANNING STATE -->
+            <div id="step-scan" class="py-12 text-center space-y-6 hidden">
+              <div class="w-16 h-16 rounded-2xl bg-navy-900 text-teal-400 flex items-center justify-center mx-auto animate-bounce">
+                <i data-lucide="scan" class="w-8 h-8"></i>
+              </div>
+              <div>
+                <h4 class="text-lg font-bold text-navy-950 mb-1">Analyzing Your Local Territory...</h4>
+                <p id="scan-status-text" class="text-xs text-slate-500 font-mono">Connecting to Google Places & Local Search Index...</p>
+              </div>
+              <div class="w-full max-w-md mx-auto bg-slate-200 h-2.5 rounded-full overflow-hidden">
+                <div id="scan-progress-bar" class="bg-teal-500 h-full w-1/4 transition-all duration-500"></div>
+              </div>
+            </div>
+
+            <!-- SUCCESS CONFIRMATION STATE -->
+            <div id="step-success" class="py-8 text-center space-y-6 hidden">
+              <div class="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
+                <i data-lucide="check" class="w-8 h-8"></i>
+              </div>
+              <div class="space-y-2">
+                <h3 class="text-2xl font-extrabold text-navy-950">Diagnostic Audit Dispatched!</h3>
+                <p class="text-sm text-slate-600 max-w-md mx-auto">
+                  We've initiated the comprehensive report for <span id="success-biz-name" class="font-bold text-navy-900">Your Business</span>. A Vecturo local growth engineer is reviewing your competitor gap map now.
+                </p>
+              </div>
+              <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 text-xs text-slate-500 max-w-sm mx-auto">
+                Check your inbox in 2-3 minutes for your custom PDF report and recommended action steps.
+              </div>
+              <div class="pt-2">
+                <a href="contact.html" class="inline-flex items-center gap-2 text-xs font-bold text-navy-900 hover:text-teal-600">
+                  Want to review the numbers live? Book a 20-min strategy call <i data-lucide="calendar" class="w-4 h-4"></i>
+                </a>
+              </div>
+            </div>
+
+          </form>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= FREQUENTLY ASKED QUESTIONS ================= -->
+    <section class="py-20 md:py-28 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center space-y-3 mb-16">
+          <span class="text-xs font-bold uppercase tracking-wider text-teal-600">Clear Answers</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-950">
+            Frequently Asked Questions
+          </h2>
+        </div>
+
+        <div class="space-y-4">
+          
+          <details class="group p-6 rounded-2xl bg-slate-50 border border-slate-200 open:bg-white open:shadow-md transition-all">
+            <summary class="flex items-center justify-between cursor-pointer font-bold text-navy-950 text-base list-none">
+              <span>Why can't I just use Wix, Squarespace, or a cheap DIY builder?</span>
+              <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform"></i>
+            </summary>
+            <p class="mt-4 text-sm text-slate-600 leading-relaxed">
+              DIY website builders load hundreds of unoptimized scripts, resulting in 4-6 second load times that fail Google's Core Web Vitals. Crucially, they do not configure localized Schema.org microdata, geotagged citation loops, or automated local 3-pack review systems. They give you a page; Vecturo builds you an engineered local acquisition engine.
+            </p>
+          </details>
+
+          <details class="group p-6 rounded-2xl bg-slate-50 border border-slate-200 open:bg-white open:shadow-md transition-all">
+            <summary class="flex items-center justify-between cursor-pointer font-bold text-navy-950 text-base list-none">
+              <span>How fast does Vecturo deliver our complete digital ecosystem?</span>
+              <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform"></i>
+            </summary>
+            <p class="mt-4 text-sm text-slate-600 leading-relaxed">
+              Our full multi-page architecture, branding assets, and Google Business Profile optimization are launched and validated within 21 business days. Traditional agencies take 4 to 6 months of endless billable hours; our streamlined sprint gets you capturing revenue immediately.
+            </p>
+          </details>
+
+          <details class="group p-6 rounded-2xl bg-slate-50 border border-slate-200 open:bg-white open:shadow-md transition-all">
+            <summary class="flex items-center justify-between cursor-pointer font-bold text-navy-950 text-base list-none">
+              <span>What happens if we already have an existing domain or older website?</span>
+              <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform"></i>
+            </summary>
+            <p class="mt-4 text-sm text-slate-600 leading-relaxed">
+              We handle the entire migration seamlessly. We preserve your existing domain authority with strict 301 SEO redirects so you never drop traffic, upgrade the speed infrastructure, and overhaul the user interface without any operational downtime for your business.
+            </p>
+          </details>
+
+          <details class="group p-6 rounded-2xl bg-slate-50 border border-slate-200 open:bg-white open:shadow-md transition-all">
+            <summary class="flex items-center justify-between cursor-pointer font-bold text-navy-950 text-base list-none">
+              <span>What is the 100% Ironclad Compliance Guarantee?</span>
+              <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform"></i>
+            </summary>
+            <p class="mt-4 text-sm text-slate-600 leading-relaxed">
+              We stand by our work. If your Google Profile and local web infrastructure do not pass all verified local search benchmarks and technical audits within 30 days of launch, we will refund your onboarding fee in full. No asterisks, no runarounds.
+            </p>
+          </details>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= GLOBAL FOOTER ================= -->
+  <footer class="bg-navy-950 text-slate-300 pt-16 pb-12 border-t border-navy-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-navy-800">
+        
+        <!-- Brand Synopsis -->
+        <div class="lg:col-span-2 space-y-4">
+          <img src="assets/logo.png" alt="Vecturo" class="h-10 w-auto">
+          <p class="text-sm text-slate-400 leading-relaxed max-w-sm">
+            Turning offline struggle into structured online dominance. Vecturo arms independent brick-and-mortar storefronts with elite digital ecosystems to capture their rightful local market share.
+          </p>
+          <div class="pt-2 text-xs text-teal-400 font-semibold flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-teal-400"></span>
+            <span>Accelerating Local Growth Nationwide</span>
+          </div>
+        </div>
+
+        <!-- Links Column 1: Ecosystem -->
+        <div class="space-y-3">
+          <div class="text-xs uppercase font-extrabold tracking-wider text-white">Ecosystem</div>
+          <ul class="space-y-2 text-sm text-slate-400">
+            <li><a href="services.html#pillar-1" class="hover:text-teal-400 transition-colors">Custom Websites</a></li>
+            <li><a href="services.html#pillar-2" class="hover:text-teal-400 transition-colors">Google 3-Pack SEO</a></li>
+            <li><a href="services.html#pillar-3" class="hover:text-teal-400 transition-colors">Brand & Visual Identity</a></li>
+            <li><a href="services.html#packages" class="hover:text-teal-400 transition-colors">Package Matrix</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Column 2: Ecosystem & Company -->
+        <div class="space-y-3">
+          <div class="text-xs uppercase font-extrabold tracking-wider text-white">Company</div>
+          <ul class="space-y-2 text-sm text-slate-400">
+            <li><a href="about.html" class="hover:text-teal-400 transition-colors">Our Mission</a></li>
+            <li><a href="#calculator-section" class="hover:text-teal-400 transition-colors">Profit Leak Calculator</a></li>
+            <li><a href="contact.html" class="hover:text-teal-400 transition-colors">Discovery Scheduling</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Column 3: Contact Details -->
+        <div class="space-y-3">
+          <div class="text-xs uppercase font-extrabold tracking-wider text-white">Headquarters</div>
+          <ul class="space-y-2 text-sm text-slate-400">
+            <li class="flex items-center gap-2">
+              <i data-lucide="phone" class="w-3.5 h-3.5 text-teal-400"></i>
+              <a href="tel:+919891875136" class="hover:text-teal-300 font-mono">+91 98918 75136</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="mail" class="w-3.5 h-3.5 text-teal-400"></i>
+              <a href="mailto:vecturosupport@gmail.com" class="hover:text-teal-300">vecturosupport@gmail.com</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="map-pin" class="w-3.5 h-3.5 text-teal-400"></i>
+              <span>New Delhi, India</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <div>
+          © 2026 Vecturo Technologies LLC. All rights reserved.
+        </div>
+        <div class="flex items-center gap-6">
+          <a href="#" class="hover:text-slate-300">Privacy Policy</a>
+          <a href="#" class="hover:text-slate-300">Terms of Service</a>
+          <a href="#" class="hover:text-slate-300">Local SEO Compliance Standards</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/calculator.js"></script>
+  <script src="js/audit-form.js"></script>
+</body>
+</html>

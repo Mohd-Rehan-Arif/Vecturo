@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services & Solutions — Vecturo | Accelerating Local Growth</title>
+  <meta http-equiv="refresh" content="0; url=services.html">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: {
+              950: '#061325',
+              900: '#0A2540',
+              800: '#0F355C',
+              700: '#174E82',
+            },
+            teal: {
+              400: '#26E0C2',
+              500: '#00D4B2',
+              600: '#00B89A',
+              700: '#0D9488',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-[#FAFAFC] text-slate-800 antialiased flex flex-col min-h-screen">
+
+  <!-- TOP BANNER -->
+  <div class="bg-gradient-to-r from-navy-950 via-navy-900 to-navy-950 text-white text-xs py-2 px-4 border-b border-navy-800">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-teal-500 text-navy-900">VERIFIED OUTCOMES</span>
+        <span class="text-slate-200">Documented Margins Recovered Across Local Verticals.</span>
+      </div>
+      <a href="contact.html" class="font-semibold text-teal-400 hover:text-teal-300">
+        Get Your Free Footprint Audit &rarr;
+      </a>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header id="site-header" class="sticky top-0 z-40 transition-all duration-300 bg-white/95 backdrop-blur-md border-b border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center gap-3 group">
+          <img src="assets/logo.png" alt="Vecturo Logo" class="h-11 w-auto object-contain transition-transform group-hover:scale-105">
+        </a>
+        <nav class="hidden md:flex items-center space-x-8">
+          <a href="index.html" class="nav-link text-sm font-medium text-slate-600 hover:text-teal-600">Home</a>
+          <a href="services.html" class="nav-link text-sm font-medium text-slate-600 hover:text-teal-600">Services</a>
+          <a href="case-studies.html" class="nav-link text-sm font-semibold text-teal-600">Case Studies</a>
+          <a href="index.html#calculator-section" class="text-sm font-medium text-slate-600 hover:text-teal-600">ROI Calculator</a>
+          <a href="about.html" class="nav-link text-sm font-medium text-slate-600 hover:text-teal-600">About Us</a>
+          <a href="contact.html" class="nav-link text-sm font-medium text-slate-600 hover:text-teal-600">Contact</a>
+        </nav>
+        <div class="hidden md:flex items-center gap-4">
+          <a href="contact.html" class="inline-flex items-center px-5 py-2.5 rounded-lg text-sm font-semibold text-navy-950 bg-teal-500 hover:bg-teal-400 glow-teal transition-all">
+            Claim Free Audit
+          </a>
+        </div>
+        <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-600 hover:text-navy-900">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="fixed inset-0 z-50 bg-navy-950/80 backdrop-blur-sm hidden">
+    <div class="fixed top-0 right-0 w-full max-w-sm h-full bg-white shadow-2xl p-6 flex flex-col justify-between">
+      <div>
+        <div class="flex items-center justify-between pb-6 border-b border-slate-100">
+          <img src="assets/logo.png" alt="Vecturo" class="h-9 w-auto">
+          <button id="close-mobile-menu" class="p-2 text-slate-400 hover:text-slate-700">
+            <i data-lucide="x" class="w-6 h-6"></i>
+          </button>
+        </div>
+        <nav class="mt-6 flex flex-col space-y-4">
+          <a href="index.html" class="mobile-nav-link text-lg font-medium text-slate-600">Home</a>
+          <a href="services.html" class="mobile-nav-link text-lg font-medium text-slate-600">Services</a>
+          <a href="case-studies.html" class="mobile-nav-link text-lg font-semibold text-teal-600">Case Studies</a>
+          <a href="about.html" class="mobile-nav-link text-lg font-medium text-slate-600">About Us</a>
+          <a href="contact.html" class="mobile-nav-link text-lg font-medium text-slate-600">Contact & Audit</a>
+        </nav>
+      </div>
+      <div class="pt-6 border-t border-slate-100">
+        <a href="contact.html" class="w-full inline-flex items-center justify-center py-3 rounded-lg font-bold text-navy-950 bg-teal-500 hover:bg-teal-400">
+          Claim Free Audit
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main class="flex-grow">
+    
+    <!-- HERO SECTION -->
+    <section class="py-16 md:py-24 bg-white border-b border-slate-200/80 bg-grid-pattern">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-navy-900 text-teal-400 text-xs font-bold uppercase tracking-wider">
+            Real Proof &bull; Real Stores &bull; Real Revenue
+          </div>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-navy-950 tracking-tight">
+            Documented Recoveries. <br>
+            <span class="text-gradient">Measured Local Dominance.</span>
+          </h1>
+          <p class="text-lg text-slate-600 leading-relaxed">
+            See how independent local businesses escaped the offline trap, overtook bloated regional competitors, and unlocked predictable monthly growth with Vecturo.
+          </p>
+        </div>
+
+        <!-- AGGREGATE STATS BANNER -->
+        <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 pt-10 border-t border-slate-200">
+          <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+            <div class="text-3xl font-extrabold text-teal-600 font-mono">+210%</div>
+            <div class="text-xs text-slate-600 font-bold uppercase tracking-wider mt-1">Organic Inquiries</div>
+          </div>
+          <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+            <div class="text-3xl font-extrabold text-navy-950 font-mono">&lt; 0.75s</div>
+            <div class="text-xs text-slate-600 font-bold uppercase tracking-wider mt-1">Mobile Load Speeds</div>
+          </div>
+          <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+            <div class="text-3xl font-extrabold text-amber-500 font-mono">4.9 ★</div>
+            <div class="text-xs text-slate-600 font-bold uppercase tracking-wider mt-1">Avg Google Review Score</div>
+          </div>
+          <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+            <div class="text-3xl font-extrabold text-emerald-600 font-mono">$3.8M+</div>
+            <div class="text-xs text-slate-600 font-bold uppercase tracking-wider mt-1">Local Margins Recovered</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASE STUDIES SHOWCASE -->
+    <section class="py-20 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+        
+        <!-- CASE STUDY 1: ARTISAN BAKERY -->
+        <div class="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-lg grid grid-cols-1 lg:grid-cols-12">
+          <div class="lg:col-span-5 bg-navy-900 p-8 sm:p-12 text-white flex flex-col justify-between">
+            <div>
+              <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-teal-500/20 text-teal-300 border border-teal-500/30 uppercase tracking-wider mb-6">
+                Specialty Retail & Food
+              </div>
+              <h3 class="text-3xl font-extrabold text-white mb-2">The Hearth Artisan Bakery</h3>
+              <p class="text-slate-400 text-xs font-medium">Elena Rostova, Founder & Head Baker</p>
+
+              <div class="mt-8 space-y-4">
+                <div class="bg-navy-950 p-4 rounded-xl border border-navy-800">
+                  <div class="text-xs text-slate-400 uppercase tracking-wider">Catering Inquiries</div>
+                  <div class="text-2xl font-black text-teal-400 font-mono">+184% in 60 Days</div>
+                </div>
+                <div class="bg-navy-950 p-4 rounded-xl border border-navy-800">
+                  <div class="text-xs text-slate-400 uppercase tracking-wider">First-Quarter Growth</div>
+                  <div class="text-2xl font-black text-emerald-400 font-mono">+$42,000 Revenue</div>
+                </div>
+                <div class="bg-navy-950 p-4 rounded-xl border border-navy-800">
+                  <div class="text-xs text-slate-400 uppercase tracking-wider">Local Search Position</div>
+                  <div class="text-2xl font-black text-white font-mono">#1 on Google 3-Pack</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-8 text-xs text-slate-400 flex items-center gap-2">
+              <i data-lucide="check-circle" class="w-4 h-4 text-teal-400"></i>
+              <span>Full Vecturo Growth Engine Implemented</span>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7 p-8 sm:p-12 flex flex-col justify-between space-y-6">
+            <div class="space-y-6">
+              <div>
+                <h4 class="text-xs font-extrabold uppercase tracking-wider text-rose-600 mb-2">The Offline Leak</h4>
+                <p class="text-sm text-slate-700 leading-relaxed">
+                  Despite baking award-winning sourdough and artisanal pastries, Elena was losing thousands in lucrative corporate breakfast and wedding catering orders to generic grocery chains who held top Google positions. Their existing DIY site was broken on mobile devices and had zero Google map tags.
+                </p>
+              </div>
+
+              <div>
+                <h4 class="text-xs font-extrabold uppercase tracking-wider text-teal-600 mb-2">The Vecturo Solution</h4>
+                <p class="text-sm text-slate-700 leading-relaxed">
+                  We engineered a sub-second reactive website with a dedicated 2-step catering quote wizard, updated their Google Business Profile with high-resolution geotagged product imagery, and installed counter QR review stands for walk-in pastry patrons.
+                </p>
+              </div>
+
+              <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 italic text-slate-700 text-sm">
+                "We were invisible to corporate clients five blocks away. Vecturo changed that completely. Our weekend catering orders are now booked out two months in advance, and our weekday revenue has never been higher."
+              </div>
+            </div>
+
+            <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-xs text-slate-500 font-medium">Turnaround Time: 18 Days</span>
+              <a href="contact.html" class="text-xs font-bold text-teal-600 hover:text-teal-700 flex items-center gap-1">
+                Request Similar Blueprint <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CASE STUDY 2: BOUTIQUE DENTAL -->
+        <div class="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-lg grid grid-cols-1 lg:grid-cols-12">
+          <div class="lg:col-span-5 bg-navy-900 p-8 sm:p-12 text-white flex flex-col justify-between">
+            <div>
+              <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-teal-500/20 text-teal-300 border border-teal-500/30 uppercase tracking-wider mb-6">
+                Healthcare & Dental Clinic
+              </div>
+              <h3 class="text-3xl font-extrabold text-white mb-2">Evans Boutique Dental</h3>
+              <p class="text-slate-400 text-xs font-medium">Dr. Marcus Evans, Lead Practitioner</p>
+
+              <div class="mt-8 space-y-4">
+                <div class="bg-navy-950 p-4 rounded-xl border border-navy-800">
+                  <div class="text-xs text-slate-400 uppercase tracking-wider">Patient Inquiries</div>
+                  <div class="text-2xl font-black text-teal-400 font-mono">310 New Inquiries</div>
+                </div>
+                <div class="bg-navy-950 p-4 rounded-xl border border-navy-800">
+                  <div class="text-xs text-slate-400 uppercase tracking-wider">Google Rating & Count</div>
+                  <div class="text-2xl font-black text-amber-400 font-mono">4.9 ★ (187 Reviews)</div>
+                </div>
+                <div class="bg-navy-950 p-4 rounded-xl border border-navy-800">
+                  <div class="text-xs text-slate-400 uppercase tracking-wider">Core Keyword Rank</div>
+                  <div class="text-2xl font-black text-emerald-400 font-mono">#1 "Cosmetic Dentist"</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-8 text-xs text-slate-400 flex items-center gap-2">
+              <i data-lucide="check-circle" class="w-4 h-4 text-teal-400"></i>
+              <span>Google 3-Pack Supremacy Engine</span>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7 p-8 sm:p-12 flex flex-col justify-between space-y-6">
+            <div class="space-y-6">
+              <div>
+                <h4 class="text-xs font-extrabold uppercase tracking-wider text-rose-600 mb-2">The Offline Leak</h4>
+                <p class="text-sm text-slate-700 leading-relaxed">
+                  Dr. Evans offered world-class cosmetic dentistry, but his clinic was languishing on Page 3 of Google search results with only 12 reviews from 2021. High-value implant and veneer prospects were consistently choosing corporate dental chains with lower clinical ratings simply because of superior search placement.
+                </p>
+              </div>
+
+              <div>
+                <h4 class="text-xs font-extrabold uppercase tracking-wider text-teal-600 mb-2">The Vecturo Solution</h4>
+                <p class="text-sm text-slate-700 leading-relaxed">
+                  We deployed a clean, soothing mobile web portal with automated patient appointment booking and implemented an automated SMS review engine that gathered 175+ legitimate 5-star Google reviews in 90 days.
+                </p>
+              </div>
+
+              <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 italic text-slate-700 text-sm">
+                "We spent tens of thousands on print ads and radio spots with zero trackable return. Vecturo delivered 310 patient inquiries in 90 days with pure local search engineering. It completely redefined our practice."
+              </div>
+            </div>
+
+            <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-xs text-slate-500 font-medium">Turnaround Time: 21 Days</span>
+              <a href="contact.html" class="text-xs font-bold text-teal-600 hover:text-teal-700 flex items-center gap-1">
+                Request Similar Blueprint <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CASE STUDY 3: AUTOMOTIVE -->
+        <div class="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-lg grid grid-cols-1 lg:grid-cols-12">
+          <div class="lg:col-span-5 bg-navy-900 p-8 sm:p-12 text-white flex flex-col justify-between">
+            <div>
+              <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-teal-500/20 text-teal-300 border border-teal-500/30 uppercase tracking-wider mb-6">
+                Automotive & Specialized Services
+              </div>
+              <h3 class="text-3xl font-extrabold text-white mb-2">Precision Auto Care Specialists</h3>
+              <p class="text-slate-400 text-xs font-medium">Greg Thornton, Managing Partner</p>
+
+              <div class="mt-8 space-y-4">
+                <div class="bg-navy-950 p-4 rounded-xl border border-navy-800">
+                  <div class="text-xs text-slate-400 uppercase tracking-wider">Annual Margin Recovery</div>
+                  <div class="text-2xl font-black text-emerald-400 font-mono">$85,000 Recovered</div>
+                </div>
+                <div class="bg-navy-950 p-4 rounded-xl border border-navy-800">
+                  <div class="text-xs text-slate-400 uppercase tracking-wider">Direct Phone Calls</div>
+                  <div class="text-2xl font-black text-teal-400 font-mono">2.4x Volume</div>
+                </div>
+                <div class="bg-navy-950 p-4 rounded-xl border border-navy-800">
+                  <div class="text-xs text-slate-400 uppercase tracking-wider">Google Compliance</div>
+                  <div class="text-2xl font-black text-white font-mono">100% Core Vitals</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-8 text-xs text-slate-400 flex items-center gap-2">
+              <i data-lucide="check-circle" class="w-4 h-4 text-teal-400"></i>
+              <span>High-Trust Brand & Intake Funnel</span>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7 p-8 sm:p-12 flex flex-col justify-between space-y-6">
+            <div class="space-y-6">
+              <div>
+                <h4 class="text-xs font-extrabold uppercase tracking-wider text-rose-600 mb-2">The Offline Leak</h4>
+                <p class="text-sm text-slate-700 leading-relaxed">
+                  Precision Auto was losing major transmission and engine overhaul jobs to official dealership service centers charging 60% higher rates. Motorists with broken-down vehicles used their phones to find rapid repair options; Precision didn't even have a functioning mobile site.
+                </p>
+              </div>
+
+              <div>
+                <h4 class="text-xs font-extrabold uppercase tracking-wider text-teal-600 mb-2">The Vecturo Solution</h4>
+                <p class="text-sm text-slate-700 leading-relaxed">
+                  We engineered an emergency vehicle diagnostic quote tool with direct tap-to-call roadside routing, verified citations across 50 directories, and overhauled their brand visuals to look like an elite master performance shop.
+                </p>
+              </div>
+
+              <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 italic text-slate-700 text-sm">
+                "Our phones ring constantly now with high-margin transmission repairs instead of oil changes. The $85,000 profit leak was real, and Vecturo stopped it within weeks."
+              </div>
+            </div>
+
+            <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-xs text-slate-500 font-medium">Turnaround Time: 16 Days</span>
+              <a href="contact.html" class="text-xs font-bold text-teal-600 hover:text-teal-700 flex items-center gap-1">
+                Request Similar Blueprint <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- BOTTOM CTA -->
+    <section class="py-16 bg-navy-950 text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white">
+          Is Your Business Ready to Be the Next Success Story?
+        </h2>
+        <p class="text-slate-300 max-w-xl mx-auto text-sm sm:text-base">
+          Claim your free 8-page digital audit and let our engineers identify your territory's revenue leak today.
+        </p>
+        <div>
+          <a href="contact.html" class="inline-flex items-center gap-2 px-8 py-4 rounded-xl text-base font-bold text-navy-950 bg-teal-500 hover:bg-teal-400 glow-teal transition-all">
+            <span>Claim Your Digital Footprint Audit</span>
+            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- GLOBAL FOOTER -->
+  <footer class="bg-navy-950 text-slate-300 pt-16 pb-12 border-t border-navy-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-navy-800">
+        <div class="lg:col-span-2 space-y-4">
+          <img src="assets/logo.png" alt="Vecturo" class="h-10 w-auto">
+          <p class="text-sm text-slate-400 leading-relaxed max-w-sm">
+            Turning offline struggle into structured online dominance. Vecturo arms independent brick-and-mortar storefronts with elite digital ecosystems.
+          </p>
+        </div>
+        <div class="space-y-3">
+          <div class="text-xs uppercase font-extrabold tracking-wider text-white">Ecosystem</div>
+          <ul class="space-y-2 text-sm text-slate-400">
+            <li><a href="services.html#pillar-1" class="hover:text-teal-400">Custom Websites</a></li>
+            <li><a href="services.html#pillar-2" class="hover:text-teal-400">Google 3-Pack SEO</a></li>
+            <li><a href="services.html#pillar-3" class="hover:text-teal-400">Brand & Visual Identity</a></li>
+          </ul>
+        </div>
+        <div class="space-y-3">
+          <div class="text-xs uppercase font-extrabold tracking-wider text-white">Company</div>
+          <ul class="space-y-2 text-sm text-slate-400">
+            <li><a href="about.html" class="hover:text-teal-400">Our Mission</a></li>
+            <li><a href="index.html#calculator-section" class="hover:text-teal-400">Profit Leak Calculator</a></li>
+            <li><a href="contact.html" class="hover:text-teal-400">Discovery Scheduling</a></li>
+          </ul>
+        </div>
+        <div class="space-y-3">
+          <div class="text-xs uppercase font-extrabold tracking-wider text-white">Headquarters</div>
+          <ul class="space-y-2 text-sm text-slate-400">
+            <li class="flex items-center gap-2">
+              <i data-lucide="phone" class="w-3.5 h-3.5 text-teal-400"></i>
+              <a href="tel:+919891875136" class="hover:text-teal-300 font-mono">+91 98918 75136</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="mail" class="w-3.5 h-3.5 text-teal-400"></i>
+              <a href="mailto:vecturosupport@gmail.com" class="hover:text-teal-300">vecturosupport@gmail.com</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="map-pin" class="w-3.5 h-3.5 text-teal-400"></i>
+              <span>New Delhi, India</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="pt-8 text-xs text-slate-500 text-center">
+        © 2026 Vecturo Technologies LLC. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
