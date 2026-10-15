@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
         submitted_at: new Date().toLocaleString()
       };
 
-      // Dispatch session/audit email to vecturosupport@gmail.com
+      // Dispatch audit email to vecturosupport@gmail.com
       sendEmailToVecturo(auditPayload, `New Audit Request: ${auditPayload.business_name} (${auditPayload.city_location})`);
 
       // Hide step 3, show scan animation
@@ -151,9 +151,156 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Calendar Discovery Booking Logic
+  // ==========================================
+  // HYBRID TARGET DATE & TIME SELECTION ENGINE
+  // ==========================================
+  let currentSelectedDate = '';
+  let selectedSlot = '10:00 AM IST';
+
+  function initDynamicDates() {
+    const dateToday = new Date();
+    const dateTmrw = new Date(Date.now() + 86400000);
+    const dateNext = new Date(Date.now() + 86400000 * 2);
+
+    const fmt = (d) => d.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+    const toIso = (d) => {
+      const yr = d.getFullYear();
+      const mo = String(d.getMonth() + 1).padStart(2, '0');
+      const da = String(d.getDate()).padStart(2, '0');
+      return `${yr}-${mo}-${da}`;
+    };
+
+    const dispToday = document.getElementById('date-display-today');
+    const dispTmrw = document.getElementById('date-display-tmrw');
+    const dispNext = document.getElementById('date-display-next');
+
+    const radToday = document.getElementById('radio-today');
+    const radTmrw = document.getElementById('radio-tmrw');
+    const radNext = document.getElementById('radio-next');
+
+    const labelToday = document.getElementById('date-label-today');
+    const labelTmrw = document.getElementById('date-label-tmrw');
+    const labelNext = document.getElementById('date-label-next');
+
+    const customCal = document.getElementById('custom-calendar-date');
+
+    if (dispToday) dispToday.textContent = fmt(dateToday);
+    if (dispTmrw) dispTmrw.textContent = fmt(dateTmrw);
+    if (dispNext) dispNext.textContent = fmt(dateNext);
+
+    const todayVal = `Today (${fmt(dateToday)})`;
+    const tmrwVal = `Tomorrow (${fmt(dateTmrw)})`;
+    const nextVal = `Day After (${fmt(dateNext)})`;
+
+    if (radToday) radToday.value = todayVal;
+    if (radTmrw) radTmrw.value = tmrwVal;
+    if (radNext) radNext.value = nextVal;
+
+    // Set initial selected date
+    currentSelectedDate = todayVal;
+
+    if (customCal) {
+      customCal.min = toIso(dateToday);
+    }
+
+    function setActiveQuickButton(activeLabel, activeRadio, val) {
+      [labelToday, labelTmrw, labelNext].forEach(l => {
+        if (!l) return;
+        l.classList.remove('border-2', 'border-teal-500', 'bg-teal-50/60', 'shadow-sm');
+        l.classList.add('border-slate-200');
+        const badge = l.querySelector('div:first-of-type');
+        if (badge) {
+          badge.classList.remove('text-teal-700', 'font-extrabold');
+          badge.classList.add('text-slate-500', 'font-semibold');
+        }
+      });
+
+      if (activeLabel) {
+        activeLabel.classList.remove('border-slate-200');
+        activeLabel.classList.add('border-2', 'border-teal-500', 'bg-teal-50/60', 'shadow-sm');
+        const badge = activeLabel.querySelector('div:first-of-type');
+        if (badge) {
+          badge.classList.remove('text-slate-500', 'font-semibold');
+          badge.classList.add('text-teal-700', 'font-extrabold');
+        }
+      }
+
+      if (activeRadio) activeRadio.checked = true;
+      currentSelectedDate = val;
+
+      if (customCal) {
+        customCal.value = '';
+        customCal.classList.remove('border-teal-500', 'bg-teal-50/40', 'ring-1', 'ring-teal-500');
+      }
+    }
+
+    if (labelToday) labelToday.addEventListener('click', () => setActiveQuickButton(labelToday, radToday, todayVal));
+    if (labelTmrw) labelTmrw.addEventListener('click', () => setActiveQuickButton(labelTmrw, radTmrw, tmrwVal));
+    if (labelNext) labelNext.addEventListener('click', () => setActiveQuickButton(labelNext, radNext, nextVal));
+
+    // Handle Custom Date Picker changes
+    if (customCal) {
+      customCal.addEventListener('change', () => {
+        if (customCal.value) {
+          // Deselect quick buttons
+          [labelToday, labelTmrw, labelNext].forEach(l => {
+            if (!l) return;
+            l.classList.remove('border-2', 'border-teal-500', 'bg-teal-50/60', 'shadow-sm');
+            l.classList.add('border-slate-200');
+            const badge = l.querySelector('div:first-of-type');
+            if (badge) {
+              badge.classList.remove('text-teal-700', 'font-extrabold');
+              badge.classList.add('text-slate-500', 'font-semibold');
+            }
+          });
+          [radToday, radTmrw, radNext].forEach(r => { if (r) r.checked = false; });
+
+          customCal.classList.add('border-teal-500', 'bg-teal-50/40', 'ring-1', 'ring-teal-500');
+          
+          // Format custom date
+          const parts = customCal.value.split('-');
+          const pickedDate = new Date(parts[0], parts[1] - 1, parts[2]);
+          currentSelectedDate = pickedDate.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' });
+        }
+      });
+    }
+  }
+
+  // Dual / Auto-Detect Timezone
+  function initTimezoneDetection() {
+    const tzText = document.getElementById('tz-display-text');
+    try {
+      const userTz = Intl.DateTimeFormat().resolvedOptions().timeZone || 'Local';
+      if (userTz === 'Asia/Kolkata' || userTz === 'Asia/Calcutta') {
+        if (tzText) tzText.textContent = `IST (UTC+5:30) • Local: India`;
+      } else {
+        const shortTz = new Intl.DateTimeFormat('en-US', { timeZoneName: 'short' })
+          .formatToParts(new Date())
+          .find(p => p.type === 'timeZoneName')?.value || userTz;
+        if (tzText) tzText.textContent = `IST (UTC+5:30) • Local: ${shortTz} (${userTz})`;
+      }
+    } catch (e) {
+      if (tzText) tzText.textContent = `IST (UTC+5:30)`;
+    }
+  }
+
+  initDynamicDates();
+  initTimezoneDetection();
+
+  // Calendar Discovery Time Slot Logic
   const calendarSlots = document.querySelectorAll('.calendar-slot');
-  let selectedSlot = '10:00 AM CST';
+  if (calendarSlots.length > 0) {
+    // Select first slot by default
+    calendarSlots[0].classList.remove('bg-white', 'text-slate-700', 'border-slate-200');
+    calendarSlots[0].classList.add('bg-[#00D4B2]', 'text-[#0A2540]', 'font-bold', 'border-[#00D4B2]');
+    selectedSlot = calendarSlots[0].getAttribute('data-time') || calendarSlots[0].textContent.trim();
+
+    const confirmBtn = document.getElementById('confirm-booking-btn');
+    if (confirmBtn) {
+      confirmBtn.removeAttribute('disabled');
+      confirmBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+    }
+  }
 
   calendarSlots.forEach(slot => {
     slot.addEventListener('click', () => {
@@ -183,9 +330,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const emailInput = document.getElementById('session-email');
       const phoneInput = document.getElementById('session-phone');
       const notesInput = document.getElementById('session-notes');
-      const dateChecked = document.querySelector('input[name="call_date"]:checked');
 
-      const selectedDate = dateChecked ? dateChecked.value : 'Upcoming Window';
       const bizName = bizNameInput ? bizNameInput.value.trim() : 'Local Business';
       const contactName = nameInput ? nameInput.value.trim() : '';
       const email = emailInput ? emailInput.value.trim() : '';
@@ -198,7 +343,7 @@ document.addEventListener('DOMContentLoaded', () => {
         contact_person: contactName,
         contact_email: email,
         contact_phone: phone,
-        selected_session_date: selectedDate,
+        selected_session_date: currentSelectedDate || 'Today',
         selected_session_time: selectedSlot,
         business_notes_and_goals: notes,
         notification_recipient: TARGET_EMAIL,
@@ -206,7 +351,7 @@ document.addEventListener('DOMContentLoaded', () => {
       };
 
       // Send the session email directly to vecturosupport@gmail.com
-      sendEmailToVecturo(sessionPayload, `New Discovery Session Booking: ${bizName} - ${selectedSlot} (${selectedDate})`);
+      sendEmailToVecturo(sessionPayload, `New Discovery Session Booking: ${bizName} - ${selectedSlot} (${sessionPayload.selected_session_date})`);
 
       // UI State Transition
       const calendarSuccess = document.getElementById('calendar-success');
@@ -216,7 +361,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (calendarPicker) calendarPicker.classList.add('hidden');
       if (calendarSuccess) calendarSuccess.classList.remove('hidden');
       if (bookedTimeText) {
-        bookedTimeText.textContent = `${selectedDate} at ${selectedSlot}`;
+        bookedTimeText.textContent = `${sessionPayload.selected_session_date} at ${selectedSlot}`;
       }
 
       if (window.showToast) {
