@@ -56,7 +56,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
         <a href="index.html" class="flex items-center gap-3 group">
-          <img src="assets/logo.png" alt="Vecturo Logo" class="h-12 md:h-[48px] w-auto object-contain transition-transform group-hover:scale-105">
+          <img src="assets/logo.png" onerror="if(this.src.indexOf('images/')===-1){this.src='images/logo.png'}else if(!this.src.endsWith('/logo.png')){this.src='logo.png'}" alt="Vecturo Logo" class="h-12 md:h-[48px] w-auto object-contain transition-transform group-hover:scale-105">
         </a>
         <nav class="hidden md:flex items-center space-x-8">
           <a href="index.html" class="nav-link text-sm font-medium text-slate-600 hover:text-teal-600">Home</a>
@@ -82,7 +82,7 @@
     <div class="fixed top-0 right-0 w-full max-w-sm h-full bg-white shadow-2xl p-6 flex flex-col justify-between">
       <div>
         <div class="flex items-center justify-between pb-6 border-b border-slate-100">
-          <img src="assets/logo.png" alt="Vecturo" class="h-12 w-auto">
+          <img src="assets/logo.png" onerror="if(this.src.indexOf('images/')===-1){this.src='images/logo.png'}else if(!this.src.endsWith('/logo.png')){this.src='logo.png'}" alt="Vecturo" class="h-12 w-auto">
           <button id="close-mobile-menu" class="p-2 text-slate-400 hover:text-slate-700">
             <i data-lucide="x" class="w-6 h-6"></i>
           </button>
@@ -271,34 +271,62 @@
               <div id="calendar-picker">
                 <form id="calendar-booking-form" class="space-y-6">
                   
+                  <!-- STEP 1: HYBRID TARGET DATE SELECTION -->
                   <div>
                     <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">1. Select Target Date</label>
-                    <div class="grid grid-cols-3 gap-3">
-                      <label class="p-3 rounded-xl border border-slate-200 text-center cursor-pointer hover:border-teal-500 block has-[:checked]:border-teal-500 has-[:checked]:bg-teal-50/50">
-                        <input type="radio" name="call_date" value="Tomorrow" checked class="sr-only">
-                        <div class="text-[10px] text-slate-500 uppercase font-semibold">Tomorrow</div>
-                        <div class="text-sm font-bold text-navy-950">Wed, Oct 14</div>
+                    
+                    <!-- Dynamic Live Quick Buttons -->
+                    <div class="grid grid-cols-3 gap-3" id="quick-date-container">
+                      <label id="date-label-today" class="p-3 rounded-xl border-2 border-teal-500 bg-teal-50/60 text-center cursor-pointer block transition-all shadow-sm">
+                        <input type="radio" name="call_date" id="radio-today" value="" checked class="sr-only">
+                        <div class="text-[10px] text-teal-700 uppercase font-extrabold tracking-wide">TODAY</div>
+                        <div id="date-display-today" class="text-sm font-bold text-navy-950 mt-0.5">Loading...</div>
                       </label>
-                      <label class="p-3 rounded-xl border border-slate-200 text-center cursor-pointer hover:border-teal-500 block has-[:checked]:border-teal-500 has-[:checked]:bg-teal-50/50">
-                        <input type="radio" name="call_date" value="Thursday" class="sr-only">
-                        <div class="text-[10px] text-slate-500 uppercase font-semibold">Day 2</div>
-                        <div class="text-sm font-bold text-navy-950">Thu, Oct 15</div>
+
+                      <label id="date-label-tmrw" class="p-3 rounded-xl border border-slate-200 text-center cursor-pointer hover:border-teal-500 block transition-all">
+                        <input type="radio" name="call_date" id="radio-tmrw" value="" class="sr-only">
+                        <div class="text-[10px] text-slate-500 uppercase font-semibold">TOMORROW</div>
+                        <div id="date-display-tmrw" class="text-sm font-bold text-navy-950 mt-0.5">Loading...</div>
                       </label>
-                      <label class="p-3 rounded-xl border border-slate-200 text-center cursor-pointer hover:border-teal-500 block has-[:checked]:border-teal-500 has-[:checked]:bg-teal-50/50">
-                        <input type="radio" name="call_date" value="Friday" class="sr-only">
-                        <div class="text-[10px] text-slate-500 uppercase font-semibold">Day 3</div>
-                        <div class="text-sm font-bold text-navy-950">Fri, Oct 16</div>
+
+                      <label id="date-label-next" class="p-3 rounded-xl border border-slate-200 text-center cursor-pointer hover:border-teal-500 block transition-all">
+                        <input type="radio" name="call_date" id="radio-next" value="" class="sr-only">
+                        <div class="text-[10px] text-slate-500 uppercase font-semibold">DAY AFTER</div>
+                        <div id="date-display-next" class="text-sm font-bold text-navy-950 mt-0.5">Loading...</div>
                       </label>
+                    </div>
+
+                    <!-- Interactive Custom Calendar Date Picker -->
+                    <div class="mt-3.5 pt-3 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
+                      <div class="flex items-center gap-1.5 text-xs text-slate-500 font-medium">
+                        <i data-lucide="calendar" class="w-3.5 h-3.5 text-teal-600"></i>
+                        <span>Or choose any custom date:</span>
+                      </div>
+                      <div class="relative max-w-xs">
+                        <input type="date" id="custom-calendar-date" class="px-3.5 py-2 text-xs font-semibold rounded-xl border border-slate-300 focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 bg-white text-navy-950 cursor-pointer shadow-sm w-full">
+                      </div>
                     </div>
                   </div>
 
+                  <!-- STEP 2: TIME SLOTS WITH DUAL / AUTO-DETECT TIMEZONE -->
                   <div>
-                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">2. Select Time Window (CST)</label>
-                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
-                      <button type="button" data-time="10:00 AM CST" class="calendar-slot py-2.5 px-3 rounded-xl border border-slate-200 text-xs font-medium hover:border-teal-500 transition-colors bg-white">10:00 AM</button>
-                      <button type="button" data-time="11:30 AM CST" class="calendar-slot py-2.5 px-3 rounded-xl border border-slate-200 text-xs font-medium hover:border-teal-500 transition-colors bg-white">11:30 AM</button>
-                      <button type="button" data-time="2:00 PM CST" class="calendar-slot py-2.5 px-3 rounded-xl border border-slate-200 text-xs font-medium hover:border-teal-500 transition-colors bg-white">2:00 PM</button>
-                      <button type="button" data-time="3:45 PM CST" class="calendar-slot py-2.5 px-3 rounded-xl border border-slate-200 text-xs font-medium hover:border-teal-500 transition-colors bg-white">3:45 PM</button>
+                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2 gap-1">
+                      <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider">2. Select Time Window</label>
+                      <span id="detected-tz-badge" class="text-[11px] text-teal-800 bg-teal-500/10 border border-teal-500/30 px-2.5 py-0.5 rounded-full font-medium inline-flex items-center gap-1.5">
+                        <i data-lucide="globe" class="w-3 h-3 text-teal-600"></i>
+                        <span id="tz-display-text">IST (UTC+5:30) • Local: Detecting...</span>
+                      </span>
+                    </div>
+
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5" id="time-slots-container">
+                      <button type="button" data-time="10:00 AM IST" class="calendar-slot py-2.5 px-3 rounded-xl border border-slate-200 text-xs font-medium hover:border-teal-500 transition-colors bg-white">10:00 AM IST</button>
+                      <button type="button" data-time="11:30 AM IST" class="calendar-slot py-2.5 px-3 rounded-xl border border-slate-200 text-xs font-medium hover:border-teal-500 transition-colors bg-white">11:30 AM IST</button>
+                      <button type="button" data-time="2:00 PM IST" class="calendar-slot py-2.5 px-3 rounded-xl border border-slate-200 text-xs font-medium hover:border-teal-500 transition-colors bg-white">2:00 PM IST</button>
+                      <button type="button" data-time="3:30 PM IST" class="calendar-slot py-2.5 px-3 rounded-xl border border-slate-200 text-xs font-medium hover:border-teal-500 transition-colors bg-white">3:30 PM IST</button>
+                      <button type="button" data-time="5:00 PM IST" class="calendar-slot py-2.5 px-3 rounded-xl border border-slate-200 text-xs font-medium hover:border-teal-500 transition-colors bg-white">5:00 PM IST</button>
+                      <button type="button" data-time="6:30 PM IST" class="calendar-slot py-2.5 px-3 rounded-xl border border-slate-200 text-xs font-medium hover:border-teal-500 transition-colors bg-white">6:30 PM IST</button>
+                      <button type="button" data-time="8:00 PM IST" class="calendar-slot py-2.5 px-3 rounded-xl border border-slate-200 text-xs font-medium hover:border-teal-500 transition-colors bg-white">8:00 PM IST</button>
+                      <button type="button" data-time="9:30 PM IST" class="calendar-slot py-2.5 px-3 rounded-xl border border-slate-200 text-xs font-medium hover:border-teal-500 transition-colors bg-white">9:30 PM IST</button>
                     </div>
                   </div>
 
@@ -423,7 +451,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-navy-800">
         <div class="lg:col-span-2 space-y-4">
-          <img src="assets/logo.png" alt="Vecturo" class="h-10 w-auto">
+          <img src="assets/logo.png" onerror="if(this.src.indexOf('images/')===-1){this.src='images/logo.png'}else if(!this.src.endsWith('/logo.png')){this.src='logo.png'}" alt="Vecturo" class="h-10 w-auto">
           <p class="text-sm text-slate-400 leading-relaxed max-w-sm">
             Turning offline struggle into structured online dominance. Vecturo arms independent brick-and-mortar storefronts with elite digital ecosystems.
           </p>
